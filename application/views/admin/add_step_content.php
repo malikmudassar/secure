@@ -171,10 +171,29 @@
                     <form data-toggle="validator" action="" method="post">
                         <input type="hidden" name="step" value="<?php echo $step['id']?>">
                         <div class="form-group">
-                            <label>If </label>
-                            <span class="form-control">Red flag</span>
+                            <label>If result of step </label>
+                            <select class="form-control" name="step_result">
+                                <option value="">Select step number </option>
+                                <?php foreach($steps as $step){?>
+                                    <option value="<?php echo $step['number']?>"><?php echo $step['number']?></option>
+                                <?php }?>
+                            </select>
                         </div>
-                                                
+                        <div class="form-group">
+                            <label>is</label>
+                            <select class="form-control" name="operator">
+                                <option value=">"> Greater than </option>
+                                <option value="<"> Less than </option>
+                                <option value="=="> Equals </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>this</label>
+                            <input type="text" name="value" class="form-control">
+                        </div>
+                        <div class="form-group">
+                           <input type="checkbox" name="flag" value="red"> Mark red flag
+                        </div>
                         <div class="form-group">
                             <label>Then next step </label>
                             <select class="form-control" name="if_next_step">

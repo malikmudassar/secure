@@ -33,7 +33,7 @@
     <div class="pathwaysContent maincontent-space">
         <div class="pathways">
             <div style="padding-bottom: 20px;">
-            	<b><?php echo $this->session->userdata['name']?></b> | <?php echo $this->session->userdata['gender']?>, <?php echo $this->session->userdata['age']?> yrs 
+            	<b><?php echo $this->session->userdata['name']?></b> | <?php echo $this->session->userdata['gender']?>, <?php echo $this->session->userdata['age']?> yrs <?php if($this->session->userdata['flag']=='red'){?><span style="background:<?php echo $this->session->userdata['flag']?>"> ____ </span><?php }?>
             	
             	
             </div>
@@ -58,7 +58,7 @@
                                 > <?php echo $form[$i]['caption'];?>
                             </div>
                         <?php }
-                        //echo '<pre>';print_r($question);echo '</pre>';
+                        	//echo '<pre>';print_r($question);echo '</pre>';
                         ?>
                         <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
                         <input type="hidden" name="step" value="<?php echo $question['step']?>">
