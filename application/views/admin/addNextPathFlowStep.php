@@ -14,7 +14,13 @@
                         </div>
                         <?php for($i=0;$i<count($form);$i++){?>
                             <div class="form-group">
+                                <?php if($form[$i]['type']=='text'){?>
+                                    <label><?php echo $form[$i]['caption']?></label>
+                                    <input type="text" name="$form[$i]['name']" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>">
+                                <?php }?>
+                                <?php if($form[$i]['type']=='radio'){?>
                                 <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'> <?php echo $form[$i]['caption']?>
+                                <?php }?>
                             </div>
                         <?php }?>
                         <?php //echo '<pre>';print_r($pathflow);echo '</pre>';?>
@@ -44,7 +50,9 @@
                                                 {
                                                     echo 'selected';
                                                 }
-                                                ?>><?php echo $steps[$i]['number']?></option>
+                                                ?>><?php echo $steps[$i]['number']?>
+                                                    
+                                                </option>
                                             <?php
                                             }}
                                         ?>
@@ -70,7 +78,12 @@
                                             <?php
                                             }}
                                         ?>
-                                   
+                                    <option value="0" <?php 
+                                        if($pathflow['next']==0)
+                                        {
+                                            echo 'selected';
+                                        }
+                                        ?>>Last Step</option>
                                 </select>
                             </div>
                             <div class="form-group">

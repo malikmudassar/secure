@@ -84,16 +84,31 @@
                         </div>
                         <div class="form-group">
                             <label>is</label>
-                            <select class="form-control" name="operator">
+                            <select class="form-control" name="operator" id="operator">
                                 <option value=">"> Greater than </option>
                                 <option value="<"> Less than </option>
                                 <option value="=="> Equals </option>
+                                <option value="<>"> Between </option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" id="rowThis">
                             <label>this</label>
                             <input type="text" name="value" class="form-control">
                         </div>
+                        <div class="row" style="display: none;" id="between">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>This</label>
+                                    <input type="text" name="value_from" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>And this</label>
+                                    <input type="text" name="value_to" class="form-control">
+                                </div>
+                            </div>
+                        </div>  
                         <div class="form-group">
                            <input type="checkbox" name="flag" value="red"> Mark red flag
                         </div>
@@ -218,9 +233,64 @@
                         </div>
                     </form>
                 </div>
+                <?php }elseif($step['type']=='formula'){?>
+                    <div class="login-form">
+                    <form data-toggle="validator" action="" method="post">
+                        <input type="hidden" name="step" value="<?php echo $step['id']?>">
+                        <div class="form-group">
+                            <label>If result of step </label>
+                            <select class="form-control" name="step_result">
+                                <option value="">Select step number </option>
+                                <?php foreach($steps as $step){?>
+                                    <option value="<?php echo $step['number']?>"><?php echo $step['number']?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Then next step </label>
+                            <select class="form-control" name="if_next_step">
+                                <option value="">Select step number </option>
+                                <?php foreach($steps as $step){?>
+                                    <option value="<?php echo $step['number']?>"><?php echo $step['number']?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Else next step </label>
+                            <select class="form-control" name="else_next_step">
+                                <option value="">Select step number </option>
+                                <?php foreach($steps as $step){?>
+                                    <option value="<?php echo $step['number']?>"><?php echo $step['number']?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Add </button>
+                            <a href="<?php echo base_url().'admin/manage_steps'?>" class="btn btn-warning">Back</a>
+                        </div>
+                    </form>
+                </div>
                 <?php }?>
             </div>
 
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#operator').on('change', function(){
+            var val=$('#operator').val();
+            if(val=='<>')
+            {
+                $('#rowThis').hide();
+                $('#between').show();
+            }
+            else
+            {
+                $('#rowThis').show();
+                $('#between').hide();
+            }
+        })
+    });
+</script>

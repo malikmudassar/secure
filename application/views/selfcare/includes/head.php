@@ -26,25 +26,6 @@
         }
     </style>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="<?php echo ASSET_URL?>assets/dashboard_files/analytics.js"></script><script async="" src="<?php echo ASSET_URL?>assets/dashboard_files/js.js"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+   
 
-        gtag('config', 'UA-127566968-2');
-    </script>
-<!-- Hotjar Tracking Code for dr-iq.com -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1080096,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script><script async="" src="<?php echo ASSET_URL?>assets/dashboard_files/hotjar-1080096.js"></script>
-
-<script async="" src="<?php echo ASSET_URL?>assets/dashboard_files/modules-c5c729f090830a40ca9069d25853d3f7.js"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style></head>
+</head>

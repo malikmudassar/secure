@@ -36,9 +36,12 @@
                             <select class="form-control" name="type">
                                 <option value="info"> Info </option>
                                 <option value="age"> Age Check </option>
+                                <option value="gender"> Gender Check </option>
                                 <option value="question"> Question </option>
                                 <option value="condition"> Condition </option>
                                 <option value="calculation"> Calculation </option>
+                                <option value="flag"> Flag </option>
+                                <option value="formula"> Formula </option>
                             </select>
                         </div>
                         

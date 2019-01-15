@@ -44,22 +44,50 @@
                         </div>
                         <?php for($i=0;$i<count($form);$i++){?>
                             <div class="form-group">
-                                <input required type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>' 
-
+                                
+                                <?php if($form[$i]['type']=='radio'){?>
+                                <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
                                 <?php 
                                 if(!empty($answer))
                                 {
-                                	if($form[$i]['value']==$answer['value'])
-                                	{
-                                		echo 'checked';
-                                	}
+                                    if($form[$i]['value']==$answer['value'])
+                                    {
+                                        echo 'checked';
+                                    }
                                 }
                                 ?>
-                                > <?php echo $form[$i]['caption'];?>
+                                required> <?php echo $form[$i]['caption']?>
+                                <?php }?>
+                                <?php if($form[$i]['type']=='checkbox'){?>
+                                <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
+                                    <?php 
+                                    if(in_array($form[$i]['value'], explode(',', $answer['value'])))
+                                    {
+                                        echo 'checked';
+                                    }
+                                    ?>
+                                > <?php echo $form[$i]['caption']?>
+                                <?php }?>
+                            
                             </div>
-                        <?php }
-                        	//echo '<pre>';print_r($question);echo '</pre>';
-                        ?>
+                            <?php }
+                            // echo 'Question: <pre>';print_r($question);echo '</pre>';
+                            ?>
+                            <?php for($i=0;$i<count($form);$i++){?>
+                            <div class="form-group">
+                                <?php if($form[$i]['type']=='text'){?>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label><?php echo $form[$i]['caption']?></label>
+                                            <input type="text" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
+                                            value="<?php echo $answer[$i]['value']?>">
+                                        </div>
+                                    </div>
+                                <?php }?>
+                            </div>
+                            <?php }
+                            //echo 'Question: <pre>';print_r($question);echo '</pre>';
+                            ?>
                         <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
                         <input type="hidden" name="step" value="<?php echo $question['step']?>">
                         <input type="hidden" name="back" value="<?php echo $question['back']?>">

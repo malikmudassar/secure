@@ -15,6 +15,7 @@ class Login extends CI_Controller {
 
     public function index()
     {
+        
         if(!$this->isLoggedIn())
         {
             $data['title']='Pathway Builder';
@@ -36,45 +37,39 @@ class Login extends CI_Controller {
                 if($this->form_validation->run()==false)
                 {
                     $data['errors']=validation_errors();
-                    $this->load->view('static/head', $data);
-                    $this->load->view('admin/login');
+                    $data['title']='Dr. IQ | Dashboard';
+                    $this->load->view('selfcare/includes/head',$data);
+                    $this->load->view('selfcare/includes/header');
+                    $this->load->view('selfcare/content/login');
+                    $this->load->view('selfcare/includes/footer');
                 }
                 else
                 {
                     $user=$this->admin_model->checkUser($_POST);
                     if(!empty($user))
                     {
-                        if($user['role']==1)
-                        {
-                            $user['type']='admin';
-                        }
-                        elseif($user['role']==2)
-                        {
-                            $user['type']='team';
-                        }
-                        elseif($user['role']==3)
-                        {
-                            $user['type']='client';
-                        }
-                        elseif($user['role']==4)
-                        {
-                            $user['type']='manager';
-                        }
+                        
                         $this->session->set_userdata($user);
-                        redirect(base_url().$user['type']);
+                        redirect(base_url().'selfcare/');
                     }
                     else
                     {
                         $data['errors']='The credentials you have provided are incorrect or your account has not been approved yet.';
-                        $this->load->view('static/head', $data);
-                        $this->load->view('admin/login');
+                        $data['title']='Dr. IQ | Dashboard';
+                        $this->load->view('selfcare/includes/head',$data);
+                        $this->load->view('selfcare/includes/header');
+                        $this->load->view('selfcare/content/login');
+                        $this->load->view('selfcare/includes/footer');
                     }
                 }
             }
             else
             {
-                $this->load->view('static/head', $data);
-                $this->load->view('admin/login');
+                $data['title']='Dr. IQ | Dashboard';
+                $this->load->view('selfcare/includes/head',$data);
+                $this->load->view('selfcare/includes/header');
+                $this->load->view('selfcare/content/login');
+                $this->load->view('selfcare/includes/footer');
             }
         }
         else

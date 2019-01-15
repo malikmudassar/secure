@@ -22,6 +22,15 @@ class Selfcare extends CI_Controller {
         $this->load->view('selfcare/includes/footer');
     }
 
+    public function landing()
+    { 
+        $data['title']='Dr. IQ | Dashboard';
+        $this->load->view('selfcare/includes/head',$data);
+        $this->load->view('selfcare/includes/header');
+        $this->load->view('selfcare/content/landing');
+        $this->load->view('selfcare/includes/footer');
+    }
+
     public function online()
     { 
         $data['title']='Dr. IQ | Dashboard';
@@ -36,6 +45,7 @@ class Selfcare extends CI_Controller {
         $this->session->set_userdata('flag','white');
         $Id=$this->uri->segment(3);
         $data['question']=$this->admin_model->getFirstPathwayQuestion($Id);
+        //echo '<pre>';print_r($data);exit;
         if(!$data['question'])
         {
             $data['error']='No steps added against this pathway yet, Please Contact Administrator';
@@ -64,7 +74,9 @@ class Selfcare extends CI_Controller {
         if($_POST)
         {
             $params=$_POST;
-            // echo '<pre>';print_r($_POST);exit;
+            $params['user_id']=$this->session->userdata['id'];
+            $params['gender']=$this->session->userdata['gender'];
+            // echo '<pre>';print_r($params);exit;
             $this->admin_model->saveResult($params);
             //echo '<pre>';print_r($_POST);exit;
             $data['question']=$this->admin_model->getNextPathwayQuestion($params);
@@ -89,15 +101,28 @@ class Selfcare extends CI_Controller {
         $params['pathway']=$this->uri->segment(3);
         $params['step']=$this->uri->segment(4);
         $params['next']=$this->uri->segment(5);
-        //echo '<pre>';print_r($params);exit;
-        $step=$this->admin_model->getStepByNumber($params['step']);
-        //echo '<pre>';print_r($getStepAnswer);exit;
-        if($step['type']!='question')
+        $params['user_id']=$this->session->userdata['id'];
+        
+        $step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
+        // echo '<pre>';print_r($step);exit;
+        if($step['type']!='question' || $step['type']!='info')
         {
-            $path=$this->admin_model->getPathFlowByStep($step['number']);
-            redirect(base_url().'selfcare/pb_view/'.$path['pathway'].'/'.$path['back'].'/'.$path['step']);
+            // echo 'go 110';exit;
+            do {
+                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+
+                $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
+                
+                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+                // print_r($path);exit;
+            }while($step['type']!='question');
+            // echo '<pre>';print_r($step);exit;
+            $params['step']=$path['step'];
+            $params['next']=$path['next'];
         }
-        $data['answer']=$this->admin_model->getStepAnswer($params['step']);
+        // echo '<pre>';print_r($params);exit;
+        $data['answer']=$this->admin_model->getStepAnswer($params);
+        // echo '<pre>';print_r($data['answer']);exit;
         $data['question']=$this->admin_model->getBackPathwayQuestion($params);
         $data['form']=$this->admin_model->getAnsForm($data['question']['question']['id']);
         //echo '<pre>';print_r($data);exit;
@@ -106,6 +131,11 @@ class Selfcare extends CI_Controller {
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/pathflow');
         $this->load->view('selfcare/includes/footer');
+    }
+
+    public function pathway_preview()
+    {
+        $user_id=1;
     }
 
 

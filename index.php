@@ -66,7 +66,7 @@
 
 
 define('ENVIRONMENT','development');
-define('ASSET_URL','http://localhost/pathwayBuilder/');
+define('ASSET_URL','http://'.$_SERVER['SERVER_NAME'].'/secure/');
 
 switch (ENVIRONMENT)
 {

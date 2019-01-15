@@ -790,8 +790,8 @@ class Admin extends CI_Controller {
         $id=$this->uri->segment(3);
         // get step data 
         $data['step']=$this->admin_model->getAllById('steps',$id);
-        $data['steps']=$this->admin_model->getAll('steps');
-        // echo '<pre>';print_r($data['steps']);exit;
+        $data['steps']=$this->admin_model->getAllStepsByPathway($data['step']['pathway']);
+        //echo '<pre>';print_r($data['steps']);exit;
         $data['pathway']=$this->admin_model->getAllById('pathways',$data['step']['pathway']);
         $data['menu']=$this->admin_model->getMenuItems();
         $data['title']='Pathway Builder';
@@ -850,6 +850,28 @@ class Admin extends CI_Controller {
             {
                 $this->admin_model->addStepFlag($_POST);
                 $data['success']='Flag check added to step';
+                
+                $this->load->view('static/head',$data);
+                $this->load->view('static/header');
+                $this->load->view('static/sidebar');
+                $this->load->view('admin/add_step_content');
+                $this->load->view('static/footer');
+            }
+            if($data['step']['type']=='formula')
+            {
+                $this->admin_model->addStepFlag($_POST);
+                $data['success']='Formula added to step';
+                
+                $this->load->view('static/head',$data);
+                $this->load->view('static/header');
+                $this->load->view('static/sidebar');
+                $this->load->view('admin/add_step_content');
+                $this->load->view('static/footer');
+            }
+            if($data['step']['type']=='gender')
+            {
+                $this->admin_model->addStepGender($_POST);
+                $data['success']='Gender added to step';
                 
                 $this->load->view('static/head',$data);
                 $this->load->view('static/header');
@@ -916,19 +938,20 @@ class Admin extends CI_Controller {
             $Id=$this->uri->segment(3);
             $data['menu']=$this->admin_model->getMenuItems();
             $data['title']='Pathway Builder';
-            $data['step']=$this->admin_model->getStepByNumber($Id);
+            $data['step']=$this->admin_model->getAllById('steps',$Id);
+            //echo '<pre>';print_r($data['step']);exit;
             $data['steps']=$this->admin_model->getPathFlowSteps($data['step']['pathway']);
             $data['question']=$this->admin_model->getQuestionByStep($Id);
             
             $data['form']=$this->admin_model->getAnsForm($data['question']['id']);
-            $data['pathflow']=$this->admin_model->getPathFlowByStep($data['step']['number']);
-            //echo '<pre>';print_r($data['steps']);exit;
+            $data['pathflow']=$this->admin_model->getPathFlowByStep($data['step']['number'],$data['step']['pathway']);
+            //echo '<pre>';print_r($data['pathflow']);exit;
             if($_POST)
             {
                 $params=$_POST;
                 //echo '<pre>';print_r($_POST);exit;
                 $this->admin_model->addNextPFinDb($params);
-                $data['pathflow']=$this->admin_model->getPathFlowByStep($data['step']['number']);
+                $data['pathflow']=$this->admin_model->getPathFlowByStep($data['step']['number'],$data['step']['pathway']);
                 $data['success']='Pathflow Updated Successfully';
                 $this->load->view('static/head',$data);
                 $this->load->view('static/header');
@@ -961,7 +984,7 @@ class Admin extends CI_Controller {
             $data['question']=$this->admin_model->getFirstPathwayQuestion($Id);
             $data['form']=$this->admin_model->getAnsForm($data['question']['question']['id']);
             
-            //echo '<pre>';print_r($data);exit;
+            echo '<pre>';print_r($data);exit;
             $data['menu']=$this->admin_model->getMenuItems();
 
             $data['title']='Pathway Builder';
