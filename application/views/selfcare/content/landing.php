@@ -1,4 +1,19 @@
 <div class="wrapper">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#e8151e !important">
+    <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive_d" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+        </button>
+        <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
+            <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
+                <li class="nav-item active menu_hide_border">
+                    <a class="menu_link_pading nav-link book-appointment-icon" href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
+                </li>                    
+            </ul>
+        </div>
+    </div>
+</nav>
     <div class="container">
         <div class="main-container">
             <h1>Hi , Welcome to <strong>Dr. iQ</strong></h1>
@@ -7,14 +22,7 @@
             <div class="mainContent maincontent-space doc_d_top_space">
 
                 <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="srvBox2 btnGradeReg">
-                                    <a href="https://app.dr-iq.com/secure/appointment/options">
-                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/bookappointment.svg" alt="image" class="img-fluid">
-                                        <div class="srvIcon">Book Appointment</div>
-                                    </a>
-                                </div>
-                            </div>
+                            
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="srvBox2 btnGradeSti">
                                     <a href="<?php echo base_url().'selfcare/online'?>">
@@ -24,8 +32,16 @@
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="srvBox2 btnGradeReg">
+                                    <a href="">
+                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/bookappointment.svg" alt="image" class="img-fluid">
+                                        <div class="srvIcon">Book Appointment</div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="srvBox2 btnGradeChase">
-                                    <a href="https://app.dr-iq.com/secure/medication/">
+                                    <a href="">
                                         <img src="<?php echo ASSET_URL?>assets/dashboard_files/medication.svg" alt="image" class="img-fluid">
                                         <div class="srvIcon">Medications</div>
                                     </a>
@@ -33,7 +49,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="srvBox2 btnGradeApp">
-                                    <a href="https://app.dr-iq.com/secure/my-surgery">
+                                    <a href="">
                                         <img src="<?php echo ASSET_URL?>assets/dashboard_files/surger.svg" alt="image" class="img-fluid">
                                         <div class="srvIcon">My Surgery</div>
                                     </a>

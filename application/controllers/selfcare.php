@@ -34,7 +34,7 @@ class Selfcare extends CI_Controller {
     public function online()
     { 
         $data['title']='Dr. IQ | Dashboard';
-        $data['pathways']=$this->admin_model->getAll('pathways');
+        $data['pathways']=$this->admin_model->getPublishedPathways();
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/pathways');
@@ -44,8 +44,50 @@ class Selfcare extends CI_Controller {
     {
         $this->session->set_userdata('flag','white');
         $Id=$this->uri->segment(3);
-        $data['question']=$this->admin_model->getFirstPathwayQuestion($Id);
-        //echo '<pre>';print_r($data);exit;
+
+        $user_id=1546;
+        $params['gender']='male';
+        $params['age']='29';
+        
+        $data=$this->admin_model->getFirstPathwayQuestion($Id, $user_id, $params['age']);
+        $params['pathway']=$Id;
+        if(!isset($params['gender']))
+        {
+            $params['gender']='male';
+        }
+        else
+        {
+            $params['gender']=$_REQUEST['gender'];
+        }
+        
+        $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
+
+
+        if(!empty($data['form']))
+        {
+            $data['step_type']=$data['form'][0]['type'];  
+            if($Id==3)
+            {
+                for($i=0;$i<count($data['form']);$i++)
+                {
+                    $data['form'][$i]['type']='decimal';
+                    $data['form'][$i]['max']=5;
+                }
+            }  
+        }
+        else
+        {
+            $data['step_type']='info';
+            $data['form']="";
+        }
+        $data['user_id']=$user_id;
+        if(!$data['percent'])
+        {            
+            $data['percent']=0;
+        }
+        
+        $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
+        $data['p_name']=$pw['name'];
         if(!$data['question'])
         {
             $data['error']='No steps added against this pathway yet, Please Contact Administrator';
@@ -57,10 +99,6 @@ class Selfcare extends CI_Controller {
         }
         else
         {
-            $data['form']=$this->admin_model->getAnsForm($data['question']['question']['id']);
-            
-            //  echo '<pre>';print_r($data);exit;
-
             $data['title']='Dr. IQ | Dashboard';
             $this->load->view('selfcare/includes/head',$data);
             $this->load->view('selfcare/includes/header');
@@ -73,17 +111,49 @@ class Selfcare extends CI_Controller {
     {
         if($_POST)
         {
-            $params=$_POST;
-            $params['user_id']=$this->session->userdata['id'];
-            $params['gender']=$this->session->userdata['gender'];
-            // echo '<pre>';print_r($params);exit;
+            $params=$_REQUEST;
+        
+            $params['user_id']=1546;
+            if($params['step']==1)
+            {
+                $this->admin_model->flush_pw_results($params['user_id'],$params['pathway']);
+            }
             $this->admin_model->saveResult($params);
-            //echo '<pre>';print_r($_POST);exit;
-            $data['question']=$this->admin_model->getNextPathwayQuestion($params);
-            $data['form']=$this->admin_model->getAnsForm($data['question']['question']['id']);
-            //echo '<pre>';print_r($data);exit;
+            if(!$params['age'])
+            {
+                $params['age']=21;
+            }
+            if(!$params['gender'])
+            {
+                $params['gender']='male';
+            }
 
+            $data=$this->admin_model->getNextPathwayQuestion($params);
 
+            $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
+            
+            if(!empty($data['form']))
+            {
+                $data['step_type']=$data['form'][0]['type'];
+            }
+            else
+            {
+                $data['step_type']='info';
+            }
+                        
+            if($data['next']==0)
+            {
+                $data['percent']=100;
+                $p=array(
+                    'user_id'   => $params['user_id'],
+                    'pathway'   => $params['pathway']
+                );
+                $this->admin_model->savePercent($p);
+            }
+
+            $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
+            $data['p_name']=$pw['name'];
+            $data['user_id']=$params['user_id'];
             $data['title']='Dr. IQ | Dashboard';
             $this->load->view('selfcare/includes/head',$data);
             $this->load->view('selfcare/includes/header');
@@ -101,31 +171,64 @@ class Selfcare extends CI_Controller {
         $params['pathway']=$this->uri->segment(3);
         $params['step']=$this->uri->segment(4);
         $params['next']=$this->uri->segment(5);
-        $params['user_id']=$this->session->userdata['id'];
+        $params['user_id']=1546;
         
         $step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
-        // echo '<pre>';print_r($step);exit;
-        if($step['type']!='question' || $step['type']!='info')
+
+        if($step['type']!='question' && $step['type']!='info')
         {
-            // echo 'go 110';exit;
             do {
                 $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
-
-                $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
-                
-                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
                 // print_r($path);exit;
+                $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
+                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
             }while($step['type']!='question');
-            // echo '<pre>';print_r($step);exit;
+            
             $params['step']=$path['step'];
             $params['next']=$path['next'];
+            
         }
-        // echo '<pre>';print_r($params);exit;
-        $data['answer']=$this->admin_model->getStepAnswer($params);
-        // echo '<pre>';print_r($data['answer']);exit;
-        $data['question']=$this->admin_model->getBackPathwayQuestion($params);
-        $data['form']=$this->admin_model->getAnsForm($data['question']['question']['id']);
-        //echo '<pre>';print_r($data);exit;
+        $data=$this->admin_model->getBackPathwayQuestion($params);
+        if($params['pathway']==3)
+        {
+            $data['answer']=$this->admin_model->getStepAnswer($params);
+        }
+        else
+        {
+            $data['answer'][0]=$this->admin_model->getStepAnswer($params);
+            if(!$data['answer'][0])
+            {
+                $data['answer'][0]=array();
+            }
+        }
+         
+        
+        $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
+
+        if(!empty($data['form']))
+        {
+            $data['step_type']=$data['form'][0]['type'];
+            if($params['pathway']==3)
+            {
+                for($i=0;$i<count($data['form']);$i++)
+                {
+                    $data['form'][$i]['type']='decimal';
+                }
+            } 
+        }
+        else
+        {
+            $data['step_type']='info';
+            $data['form']=array();
+        }
+        if($data['back']==0)
+        {
+            $data['percent']=0;
+        }
+        $data['user_id']=$params['user_id'];
+        $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
+        $data['p_name']=$pw['name'];
+
         $data['title']='Dr. IQ | Dashboard';
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');

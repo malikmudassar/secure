@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
 nav{
@@ -19,7 +19,7 @@ nav{
 */
 
 .contact-us-header-panel p {
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     color: #fff;
     font-size: 16px;
     font-weight: normal;
@@ -59,7 +59,7 @@ li.dropdown:hover > .dropdown-menu {
     font-size: 15px;
     font-weight: 500;
     font-style: normal;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     text-decoration: none;
     padding: 10px 20px;
     display: inline-block;
@@ -87,7 +87,7 @@ li.dropdown:hover > .dropdown-menu {
     font-size: 15px;
     font-weight: 500;
     font-style: normal;
-    font-family:'LatoWeb';
+    font-family:'Arial';
 }
 
 header{
@@ -165,13 +165,13 @@ header{
     font-style: normal;
     width: 40%;
     padding-top: 288px;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 .download-app-option h3{
     color: #fff;
     font-size: 27px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     padding-top: 15px;
     text-align: center;
 }
@@ -206,7 +206,7 @@ header{
 .book-consultation-cnt p{
     color: #4a4a4a;
     font-size: 15px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: normal;
     font-style: normal;
     padding-bottom: 10px;
@@ -247,7 +247,7 @@ header{
 }
 
 .home-fifth-section h3{
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size:30px;
     color: #4a4a4a;
 }
@@ -268,14 +268,14 @@ header{
     font-style: normal;
     font-size: 30px;
     line-height: 33px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .home-sixth-section h3{
     color: #fff;
     font-size: 29px;
     padding-top: 20px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 .home-sixth-section ul li img{
     width: 111px;
@@ -411,7 +411,7 @@ header{
     padding-bottom: 25px;
 }
 .contact-us-header-panel h2{
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
     font-weight: 600;
     color: #fff;
     font-style: normal;
@@ -424,7 +424,7 @@ header{
     color: #4a4a4a;
     font-size: 25px;
     font-weight: 500;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
 }
 
 .contactus-form label{
@@ -484,7 +484,7 @@ header{
     color: #fff;
     font-size: 15px;
     font-weight: 500;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .businnes-hr{
@@ -530,13 +530,13 @@ header{
     font-weight: 900;
     font-size: 42px !important;
     font-size: 3.375em;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
 }
 
 .download-app-cntent p{
     color: #4a4a4a;
     font-size: 1em;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: normal;
     font-style: normal;
     padding-top: 10px;
@@ -569,11 +569,11 @@ header{
     color: #fff;
     font-size: 45px;
     font-weight: 600;
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
 }
 
 .nhs-gps-header p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-weight: 800;
     font-size: 18px;
@@ -584,7 +584,7 @@ header{
     color: #fff;
     font-size: 25px;
     font-weight: 600;
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
     padding-top: 15px;
 }
 
@@ -608,7 +608,7 @@ header{
 }
 
 .nhs-page-content h3{
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     font-size: 22px;
     font-weight: normal;
     font-style: normal;
@@ -616,7 +616,7 @@ header{
 
 .nhs-page-content p{
     color: #4a4a4a;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 16px;
     padding-top: 10px;
     line-height: 30px;
@@ -630,7 +630,7 @@ header{
     padding-bottom: 20px;
 }
 .nhs-gps-section-two .blue-bg h3{
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     color: #fff;
     font-size: 25px;
     font-weight: 500;
@@ -640,9 +640,9 @@ header{
 
 .nhs-gps-section-two .blue-bg p{
     color: #fff;
-    font-family: 'LatoWeb';
-    font-family: 'LatoWebBold';
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
+    font-family: 'ArialBold';
+    font-family: 'Arial';
     font-size: 15px;
     padding-top: 20px;
 }
@@ -657,7 +657,7 @@ header{
 }
 
 .nhs-page-paragraph p{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 20px;
     font-weight: normal;
     margin-bottom: 0px;
@@ -683,11 +683,11 @@ header{
     color: #fff;
     font-size: 38px;
     font-weight: 600;
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
 }
 
 .nhs-patient-header p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-weight: 800;
     font-size: 19px;
@@ -697,7 +697,7 @@ header{
     color: #fff;
     font-size: 25px;
     font-weight: 600;
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
     padding-top: 15px;
 }
 
@@ -721,7 +721,7 @@ header{
 }
 
 .nhs-patient-content-page h3 {
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
@@ -729,7 +729,7 @@ header{
 
 .nhs-patient-content-page p{
     color: #4a4a4a;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 16px;
     padding-top: 10px;
     line-height: 30px;
@@ -738,7 +738,7 @@ nhs-patient-boxes{
     position: relative;
 }
 .nhs-patient-boxes h3 a{
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size: 18px;
     color: #fff;
     display: inline-block;
@@ -757,7 +757,7 @@ nhs-patient-boxes{
     background-color:#005eb8;
 }
 .blue-panel-cnt p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-size: 18px;
     font-weight: 600;
@@ -774,7 +774,7 @@ nhs-patient-boxes{
     padding: 30px 0px;
 }
 .about-us-page h2{
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
     font-weight: 600;
     color: #fff;
     font-style: normal;
@@ -782,7 +782,7 @@ nhs-patient-boxes{
     padding-top: 10px;
 }
 .about-us-page p{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     color: #fff;
     font-size: 16px;
     font-weight: normal;
@@ -796,7 +796,7 @@ nhs-patient-boxes{
 }
 .about-us-page-content p{
     font-size:17px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 /*****end about css**************/
 
@@ -812,11 +812,11 @@ nhs-patient-boxes{
     color: #fff;
     font-size: 30px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 
 .working-professional-header p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-weight: 800;
     font-size: 19px;
@@ -826,7 +826,7 @@ nhs-patient-boxes{
     color: #fff;
     font-size: 25px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     padding-top: 15px;
 }
 
@@ -847,7 +847,7 @@ nhs-patient-boxes{
     padding-bottom: 70px;
 }
 .working-professional-content-page h3{
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
@@ -856,7 +856,7 @@ nhs-patient-boxes{
 
 .working-professional-content-page p{
     color: #4a4a4a;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 16px;
     padding-top: 10px;
     line-height: 30px;
@@ -866,7 +866,7 @@ nhs-patient-boxes{
     padding: 20px 30px;
 }
 .working-professional-blue-bg h3{
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     color: #fff;
     font-size: 30px;
     font-weight: 800;
@@ -875,7 +875,7 @@ nhs-patient-boxes{
 }
 .working-professional-blue-bg p{
     color: #fff;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 20px;
     padding-top: 10.2px;
 }
@@ -893,11 +893,11 @@ nhs-patient-boxes{
     color: #fff;
     font-size:38px;
     font-weight: 600;
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
 }
 
 .parent-guardian-header p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-weight: 800;
     font-size: 18px;
@@ -925,7 +925,7 @@ nhs-patient-boxes{
 }
 
 .parent-gurdian-left-content h3{
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
@@ -933,7 +933,7 @@ nhs-patient-boxes{
 }
 .parent-gurdian-left-content p{
     color: #4a4a4a;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 17px;
     padding-top: 10px;
     line-height: 30px;
@@ -954,11 +954,11 @@ nhs-patient-boxes{
     color: #fff;
     font-size: 30px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 
 .move-page-header p{
-    font-family: 'LatoWebLight';
+    font-family: 'ArialLight';
     color: #fff;
     font-weight: 800;
     font-size: 18px;
@@ -969,7 +969,7 @@ nhs-patient-boxes{
     color: #fff;
     font-size: 25px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     padding-top: 15px;
 }
 
@@ -991,7 +991,7 @@ nhs-patient-boxes{
     padding-bottom: 70px;
 }
 .move-content-page h3 {
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
@@ -1000,7 +1000,7 @@ nhs-patient-boxes{
 
 .move-content-page p{
     color: #4a4a4a;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 17px;
     padding-top: 10px;
     line-height: 30px;
@@ -1015,11 +1015,11 @@ nhs-patient-boxes{
     font-weight: 800;
     font-style: normal;
     padding-top: 5px;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 .move-blue-bg p{
     color: #fff;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 17px;
     padding-top: 11.2px;
 }
@@ -1032,7 +1032,7 @@ nhs-patient-boxes{
     padding: 50px 0px;
 }
 .why-choose-us-nhs-gp-page h2{
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-weight: 600;
     color: #fff;
     font-style: normal;
@@ -1040,7 +1040,7 @@ nhs-patient-boxes{
     padding-top: 10px;
 }
 .why-choose-us-nhs-gp-page p{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     color: #fff;
     font-size: 16px;
     font-weight: normal;
@@ -1054,14 +1054,14 @@ nhs-patient-boxes{
 
 .why-choose-nhs-gp-content h1{
     color: #4a4a4a;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size:27px;
     font-weight: 600;
     padding-bottom: 10px;
 }
 
 .why-choose-nhs-gp-content p{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 17PX;
     font-weight: normal;
     text-align: justify;
@@ -2157,11 +2157,11 @@ nhs-patient-boxes{
     color: #fff;
     font-size: 25px;
     font-weight: 500;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
 }
 
 .reset-password-blue-panel p{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     color: #fff;
     font-size: 16px;
     font-weight: normal;
@@ -2233,7 +2233,7 @@ nhs-patient-boxes{
     color: #4a4a4a;
     font-size:20px;
     font-weight: 500;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
 }
 
 .successfull-message p{
@@ -2256,7 +2256,7 @@ nhs-patient-boxes{
     color: #4a4a4a;
     font-size:20px;
     font-weight: 500;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
 }
 
 .successfull-message-1 p{
@@ -2325,7 +2325,7 @@ nhs-patient-boxes{
     font-weight: 500;
     transition: 0.4s;
     border-bottom: 0.5px solid #979797bf;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .faqs-accordin-container .active, .accordion:hover {
@@ -2355,7 +2355,7 @@ nhs-patient-boxes{
 }
 
 .faqs-page-content h2{
-    font-family: 'LatoWebMedium';
+    font-family: 'ArialMedium';
     color: #4a4a4a;
     font-size:20px;
     font-weight: 500;
@@ -2378,7 +2378,7 @@ nhs-patient-boxes{
 
 .faqs-accordin-container .panel p{
     margin-top: 1rem;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 14px;
 }
 
@@ -2404,7 +2404,7 @@ div.panel.show {
 }
 .policy-page h2 , .terms-page h2 , .advertise-page h2
 {
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-weight: 600;
     color: #fff;
     font-style: normal;
@@ -2509,7 +2509,7 @@ div.panel.show {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     padding-top: 15px;
     text-align: right;
 }
@@ -2764,7 +2764,7 @@ body.embed , a.powered-by
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size: 17px;
     font-weight: 500;
     cursor: pointer;
@@ -2786,7 +2786,7 @@ body.embed , a.powered-by
 
 .card-login p{
     color: #9b9b9b;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: normal;
     font-style: normal;
     font-size: 17px;
@@ -2828,7 +2828,7 @@ body.embed , a.powered-by
     font-weight: bold;
     font-size: 16px;
     font-style: normal;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 
 .register-btn a strong{
@@ -2839,7 +2839,7 @@ body.embed , a.powered-by
     color: #3c6cde;
     font-weight:500;
     font-size:20px;
-    font-family: 'LatoWebBlack';
+    font-family: 'ArialBlack';
     text-align: center;
     margin-top: 20px;
 }
@@ -3032,7 +3032,7 @@ body.embed , a.powered-by
     font-size: 17px;
     font-weight: normal;
     font-style: normal;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .border-seprater{
@@ -3055,7 +3055,7 @@ body.embed , a.powered-by
 
 .notification-popup p{
     color: #3c6cde;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size: 25px;
     text-align: center;
     font-weight: 800;
@@ -3360,6 +3360,7 @@ body.embed , a.powered-by
     padding-bottom: 30px;
     bottom: 0;
     width: 100%;
+    margin-top:100px;
 }
 
 .copyright-d p{
@@ -3393,7 +3394,7 @@ body.embed , a.powered-by
     font-weight: 900;
     font-size: 28px;
     text-align: center;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     line-height: 0;
 }
 
@@ -3589,14 +3590,14 @@ body.embed , a.powered-by
 }
 
 .pathwaysContent{
-    max-width:900px;
+   
     margin: auto;
     /*    padding-left:200px;
         padding-right:200px;*/
 }
 
 .pathways{
-    /*font-family: 'LatoWebBold';*/
+    /*font-family: 'ArialBold';*/
     font-size: 15px;
 }
 
@@ -3645,7 +3646,7 @@ body.embed , a.powered-by
 
 .form-checkbox-info{
     font-size: 14px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: 500;
     position: relative;
     top: 6px;
@@ -3687,13 +3688,15 @@ body.embed , a.powered-by
 .radio-btns{
     padding-top:35px;
 }
-
+#nextMoveButton.hover {
+    color:rgb(132, 151, 236);
+}
 .submit-btns{
     padding-top: 15px;
 }
 .preview-btn{
-    background-color: #fcecd1;
-    color: #f5a623;
+    background-color: #4a4945;
+    color: hsl(0, 0%, 100%);
     font-size: 16px;
     padding-top: 7px;
     padding-bottom: 7px;
@@ -3733,7 +3736,7 @@ body.embed , a.powered-by
 
 .pathways h2{
     color: #3c6cde;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
@@ -3887,7 +3890,7 @@ body.embed , a.powered-by
 
 .notficiation-screen h2{
     color: #3c6cde;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size: 20px;
     font-weight: 600;
     font-style: normal;
@@ -3899,7 +3902,7 @@ body.embed , a.powered-by
     color: #7c99d6;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-style: normal;
 }
 
@@ -3980,7 +3983,7 @@ body.embed , a.powered-by
 
 .repeat-medication-content a{
     background-color: #f2f4f9;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 50px;
@@ -3989,7 +3992,7 @@ body.embed , a.powered-by
 
 .repeat-medication-page h2{
     color: #3c6cde;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
     font-size: 28px;
     font-weight: 600;
     font-style: normal;
@@ -4025,7 +4028,7 @@ body.embed , a.powered-by
     font-size: 17px;
     font-weight: 600;
     font-style: normal;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     padding-left: 28px;
     padding-right: 28px;
     border-radius: 5px;
@@ -4172,7 +4175,7 @@ body.embed , a.powered-by
 
 .checkbox-info{
     font-size: 18px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: 500;
     position: relative;
     top: 4px;
@@ -4188,7 +4191,7 @@ body.embed , a.powered-by
     color: #fff;
     padding: 10px 25px;
     border-radius: 5px;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-size: 15px;
     text-decoration:none;
 }
@@ -4197,14 +4200,14 @@ body.embed , a.powered-by
     color: #9b9b9b;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .breadcrumb-item.active {
     color: #3c6cde !important;
     font-size: 18px;
     font-weight: 500;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .breadcrumb-item+.breadcrumb-item::before{
@@ -4280,7 +4283,7 @@ body.embed , a.powered-by
     font-weight: 600;
     font-size: 16px;
     font-style: normal;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
 }
 
 .rating-starts{
@@ -4298,7 +4301,7 @@ body.embed , a.powered-by
 }
 
 .rating-title-heading h3{
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     font-weight: 600;
     font-size: 24px;
     margin-bottom: 20px;
@@ -4526,9 +4529,24 @@ body.embed , a.powered-by
     .web-app-logo{
         text-align:center;
     }
+    @media screen and (min-width: 340px) and (max-width: 770px) {
+        .bt-next {
+            margin-top:-50px;
+            margin-left:160px;
+        }
+        .nav-link span {
+            padding-top: 0px;
+            display: inline-block !important;
+        }
+        .menu_hide_border {
+            margin-left: -28px !important;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+      }
     .pathwaysContent{
         width:auto;
         max-width:100%;
+        margin-top:50px;
     }
     .submit-btns{
         text-align:center;
@@ -5337,7 +5355,7 @@ img {
    cursor: pointer;
     padding: 8px 36px;
     width: 100%;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #d4d4d4;
@@ -5927,7 +5945,7 @@ color:#fff !important;
     cursor: pointer;
     padding: 18px 36px;
     width: 100%;
-    font-family: 'LatoWeb';
+    font-family: 'Arial';
     border-width: 0px 1px 1px 1px;
     border-style: solid;
     border-color: #d4d4d4;
@@ -7191,7 +7209,7 @@ padding-right: 4px;
     font-weight: bold;
     font-size: 16px;
     font-style: normal;
-    font-family: 'LatoWebBold';
+    font-family: 'ArialBold';
 }
 
 #fieldContainer__problems select option{

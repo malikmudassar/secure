@@ -9,19 +9,7 @@
         </button>
         <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
             <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link book-appointment-icon" href="https://app.dr-iq.com/secure/appointment/options"><span>Book Appointment</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link online-consultation-icon" href="https://app.dr-iq.com/secure/self-care/"><span>Online Consultation</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link medications-icon" href="https://app.dr-iq.com/secure/medication/"><span>Medications</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link my-surgery-icon" href="https://app.dr-iq.com/secure/my-surgery"><span>My Surgery</span></a>
-                    </li>
-                            </ul>
+                                    
 
         </div>
     </div>

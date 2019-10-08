@@ -19,6 +19,9 @@
                         <input type="hidden" name="next" value="<?php echo $question['next']?>">
                         <div class="form-group">
                             <div class="row">
+                                <pre>
+                                <?php print_r($question);?>
+                            </pre>
                                 <div class="col-md-6" style="padding-left: 0px;">
                                     
                                     <a href="<?php echo base_url().'admin/pb_view/'.$question['pathway'].'/'.$question['back'].'/'.$question['step']?>" class="btn btn-primary" <?php if($question['back']==0){?> disabled <?php }?>>Back</a>

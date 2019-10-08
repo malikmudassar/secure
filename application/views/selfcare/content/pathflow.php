@@ -1,7 +1,7 @@
 <div class="dashboard-navigation-bar">
     <!--start navigation bar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#e8151e !important">
     <div class="container">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive_d" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,19 +9,14 @@
         </button>
         <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
             <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link book-appointment-icon" href="https://app.dr-iq.com/secure/appointment/options"><span>Book Appointment</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link online-consultation-icon" href="https://app.dr-iq.com/secure/self-care/"><span>Online Consultation</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link medications-icon" href="https://app.dr-iq.com/secure/medication/"><span>Medications</span></a>
-                    </li>
-                                    <li class="nav-item active menu_hide_border">
-                        <a class="menu_link_pading nav-link my-surgery-icon" href="https://app.dr-iq.com/secure/my-surgery"><span>My Surgery</span></a>
-                    </li>
-                            </ul>
+                <li class="nav-item active menu_hide_border">
+                    <a class="menu_link_pading nav-link book-appointment-icon" href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
+                </li>
+                <li class="nav-item active menu_hide_border">
+                    <a class="menu_link_pading nav-link book-appointment-icon" href="#">
+                        <span style="color:#fff;"><?php echo $p_name?></span></a>
+                </li>               
+            </ul>
 
         </div>
     </div>
@@ -30,38 +25,34 @@
 <!--end navigation bar -->
 </div>
 <div class="container">
-    <div class="pathwaysContent maincontent-space">
-        <div class="pathways">
-            <div style="padding-bottom: 20px;">
-            	<b><?php echo $this->session->userdata['name']?></b> | <?php echo $this->session->userdata['gender']?>, <?php echo $this->session->userdata['age']?> yrs <?php if($this->session->userdata['flag']=='red'){?><span style="background:<?php echo $this->session->userdata['flag']?>"> ____ </span><?php }?>
-            	
-            	
-            </div>
-            <div class="login-form">
+    <div class="pathwaysContent maincontent-space" style="border:1px solid #ccc; background-color:#f0eded; margin-bottom:0px; padding-left:40px; padding-right:20px; margin-top:50px;">
+        <div class="pathways" >
+            
+            <div class="login-form" >
                     <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">
                         <div class="form-group">
-                            <label><b><?php echo $question['question']['statement']?></b></label>
+                            <label><b><?php echo $question['statement']?></b></label>
                         </div>
                         <?php for($i=0;$i<count($form);$i++){?>
                             <div class="form-group">
                                 
                                 <?php if($form[$i]['type']=='radio'){?>
-                                <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
+                                <input class="w3-radio" type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
                                 <?php 
                                 if(!empty($answer))
                                 {
-                                    if($form[$i]['value']==$answer['value'])
+                                    if($form[$i]['value']==$answer[0]['value'])
                                     {
                                         echo 'checked';
                                     }
                                 }
                                 ?>
-                                required> <?php echo $form[$i]['caption']?>
+                                required> <?php echo $form[$i]['caption']?> </input>
                                 <?php }?>
                                 <?php if($form[$i]['type']=='checkbox'){?>
-                                <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
+                                <input class="w3-radio" type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
                                     <?php 
-                                    if(in_array($form[$i]['value'], explode(',', $answer['value'])))
+                                    if(in_array($form[$i]['value'], explode(',', $answer[0]['value'])))
                                     {
                                         echo 'checked';
                                     }
@@ -86,31 +77,40 @@
                                 <?php }?>
                             </div>
                             <?php }
-                            //echo 'Question: <pre>';print_r($question);echo '</pre>';
+                                // echo '<pre>';
+                                // echo 'step:'.$step.'<br>';
+                                // echo 'back:'.$back.'<br>';
+                                // echo 'next:'.$next.'<br>';
+                                // echo 'user_id:'.$user_id.'<br>';
+                                // echo '</pre>';
                             ?>
                         <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
-                        <input type="hidden" name="step" value="<?php echo $question['step']?>">
-                        <input type="hidden" name="back" value="<?php echo $question['back']?>">
-                        <input type="hidden" name="next" value="<?php echo $question['next']?>">
-                        <div class="form-group">
-                            <div class="row">
+                        <input type="hidden" name="user_id" value="1546">
+                        <input type="hidden" name="age" value="29">
+                        <input type="hidden" name="gender" value="male">
+                        <input type="hidden" name="step" value="<?php echo $step?>">
+                        <input type="hidden" name="back" value="<?php echo $back?>">
+                        <input type="hidden" name="next" value="<?php echo $next?>">
+                        <input type="hidden" name="user_id" value="1546">
+                        <div class="form-group" style="margin-bottom:10px;">
+                            <div class="row" style="margin-bottom:0px; padding-top:50px;">
                                 <div class="col-md-6" style="padding-left: 0px;">
-                                    <?php if($question['back']!=0){?>
-                                    <a href="<?php echo base_url().'selfcare/pb_view/'.$question['pathway'].'/'.$question['back'].'/'.$question['step']?>" class="btn btn-default preview-btn"   >Previous</a>
+                                    <?php if($back!=0){?>
+                                    <a href="<?php echo base_url().'selfcare/pb_view/'.$question['pathway'].'/'.$back.'/'.$step?>" class="btn btn-default preview-btn"   >Previous</a>
 
                                     <?php }?>
                                 </div>
-                                <div class="col-md-6" >
-                                	<?php if($question['next']!=0){?>
-	                                    <button type="submit" class="btn btn-default submit-btn pull-right" id="nextMoveButton">
-	                                    <?php if($question['back']==0){?>
+                                <div class="col-md-6 bt-next" >
+                                	<?php if($next!=0){?>
+	                                    <button type="submit" class="btn btn-default preview-btn pull-right" id="nextMoveButton" style="margin-top:0px;">
+	                                    <?php if($back==0){?>
 	                                    Let's start
 	                                	<?php }else{?>
 	                                		Next 
 	                                	<?php }?>
                                 	</button>
                                 	<?php }else{?>
-                                		<a href="<?php echo base_url().'selfcare/online'?>" class="btn btn-default submit-btn pull-right"> Finish </a>
+                                		<a href="<?php echo base_url().'selfcare/online'?>" class="btn btn-default preview-btn pull-right"> Finish </a>
                             		<?php }?>
                                     
                                 </div>

@@ -18,6 +18,7 @@
                                 <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'> <?php echo $form[$i]['caption']?>
                                 <?php }?>
                             </div>
+                            
                         <?php }?>
                         <div class="form-group">
                             <a href="<?php echo base_url().'admin/manage_questions'?>" class="btn btn-primary"> Back </a>
