@@ -1,7 +1,7 @@
 <div class="dashboard-navigation-bar">
     <!--start navigation bar -->
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#e8151e !important">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#1556e8 !important">
     <div class="container">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive_d" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,8 @@
             <div class="login-form" >
                     <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">
                         <div class="form-group">
-                            <label><b><?php echo $question['statement']?></b></label>
+                            <label><b><?php echo $question['statement']?></b></label><br>
+                            <a href="<?php base_url().''?>"><i class="fa fa-pencil"></i> Edit Question</a>
                         </div>
                         <?php for($i=0;$i<count($form);$i++){?>
                             <div class="form-group">
@@ -84,6 +85,8 @@
                                 // echo 'user_id:'.$user_id.'<br>';
                                 // echo '</pre>';
                             ?>
+                        
+                        <a href="<?php base_url().''?>"><i class="fa fa-pencil"></i> Edit Answer</a>
                         <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
                         <input type="hidden" name="user_id" value="1546">
                         <input type="hidden" name="age" value="29">
@@ -118,6 +121,18 @@
                         </div>
 
                     </form>
+                    <div class="col-md-12">
+                        <form id="feedback" method="post" type="">
+                            <div class="form-group">
+                                <label>Feedback</label>
+                                <textarea class="form-control" name="feedback"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Screenshot or Image</label>
+                                <input type="file" name="file" />
+                            </div>
+                        </form>
+                    </div>
 
                 </div>
             
