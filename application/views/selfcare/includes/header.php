@@ -4,8 +4,8 @@
 
         <div class="container">
 
-            <a class="navbar-brand" href="https://app.dr-iq.com/secure/">
-                <img src="<?php echo ASSET_URL?>assets/dashboard_files/header-logo.svg" class="img-fluid driq-header-logo" alt="header logo">
+            <a class="navbar-brand" href="">
+                <span style="color:black">Triage Builder</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
