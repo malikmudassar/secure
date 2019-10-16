@@ -6759,6 +6759,40 @@ class Admin_model extends CI_Model {
             return false;
         }
     }
+
+    public function updateQuestion($data, $q)
+    {
+        $item=array(
+            'statement' => $data['statement']
+        );
+        $this->db->where('id', $q)->update('questions', $item);
+    }
+
+    public function submitFeedback($data, $step, $p)
+    {
+        $item=array(
+            'feedback'  => $data['feedback'],
+            'step'      => $step,
+            'pathway'   => $p
+        );
+        $this->db->insert('feedbacks', $item);
+
+    }
+
+    public function updateAnsData($data, $q)
+    {
+        
+        $ans=$this->getAnsForm($q);
+        // echo '<pre>';print_r($ans);exit;
+        for($i=0;$i<count($ans);$i++)
+        {
+            $item=array(
+                'caption'   => $data['ans'][$i]
+            );
+            $this->db->where('id', $ans[$i]['id'])->update('ans_form', $item);
+        }
+    }
+
     ///////////////////////////////////////
     ///                                 ///
     ///     Admin Menu Section Starts   ///
@@ -6939,7 +6973,7 @@ class Admin_model extends CI_Model {
         return true;
     }
 
-    public function getAnsForm($qId, $params)
+    public function getAnsForm($qId, $params=null)
     {
         
         if($params['pathway']==4)

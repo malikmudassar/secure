@@ -1089,7 +1089,6 @@ nhs-patient-boxes{
     .navbar-expand-lg .navbar-nav .nav-link {
         padding-right: 6px;
         padding-left: 6px;
-        margin-left: 10px;
         margin-right: 10px;
     }
  }
@@ -3176,9 +3175,8 @@ body.embed , a.powered-by
 }
 
 .main-container{
-    padding-top: 110px;
     padding-bottom: 20px;
-    padding-left: 20px;
+    padding-left: 5px;
     padding-right: 20px;
 }
 
@@ -3736,7 +3734,7 @@ body.embed , a.powered-by
 
 .pathways h2{
     color: #3c6cde;
-    font-family: 'ArialBold';
+    font-family: 'Arial';
     font-style: normal;
     font-weight: 600;
     font-size: 22px;

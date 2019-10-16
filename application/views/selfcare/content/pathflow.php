@@ -10,10 +10,10 @@
         <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
             <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
                 <li class="nav-item active menu_hide_border">
-                    <a class="menu_link_pading nav-link book-appointment-icon" href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
+                    <a class="menu_link_pading nav-link " href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
                 </li>
                 <li class="nav-item active menu_hide_border">
-                    <a class="menu_link_pading nav-link book-appointment-icon" href="#">
+                    <a class="menu_link_pading nav-link " href="#">
                         <span style="color:#fff;"><?php echo $p_name?></span></a>
                 </li>               
             </ul>
@@ -29,14 +29,14 @@
         <div class="pathways" >
             
             <div class="login-form" >
-                    <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">
+                    
                         <div class="form-group">
                             <label><b><?php echo $question['statement']?></b></label><br>
-                            <a href="<?php base_url().''?>"><i class="fa fa-pencil"></i> Edit Question</a>
+                            <a href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Question</a>
                         </div>
                         <?php for($i=0;$i<count($form);$i++){?>
                             <div class="form-group">
-                                
+                            <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">    
                                 <?php if($form[$i]['type']=='radio'){?>
                                 <input class="w3-radio" type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
                                 <?php 
@@ -86,7 +86,8 @@
                                 // echo '</pre>';
                             ?>
                         
-                        <a href="<?php base_url().''?>"><i class="fa fa-pencil"></i> Edit Answer</a>
+                        <a href="<?php echo base_url().'selfcare/edit_answer/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Answer</a>
+                        
                         <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
                         <input type="hidden" name="user_id" value="1546">
                         <input type="hidden" name="age" value="29">
@@ -118,18 +119,22 @@
                                     
                                 </div>
                             </div>
+                            
                         </div>
 
                     </form>
+                    
                     <div class="col-md-12">
-                        <form id="feedback" method="post" type="">
-                            <div class="form-group">
+                            <?php if($this->session->flashdata('success')){?>
+                                    <span style="margin-left:-15px;" class="alert alert-success"> Feedback submitted </span>
+                            <?php }?>
+                        <form id="feedback" method="post" type="" action="<?php echo base_url().'selfcare/submit_feedback/'.$question['pathway'].'/'.$step?>">
+                            <div class="form-group" style="margin-top:50px">
                                 <label>Feedback</label>
-                                <textarea class="form-control" name="feedback"></textarea>
+                                <textarea class="form-control" name="feedback" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Screenshot or Image</label>
-                                <input type="file" name="file" />
+                                <button type="button" id="btn-feedback" class="btn btn-primary">Submit</button>
                             </div>
                         </form>
                     </div>

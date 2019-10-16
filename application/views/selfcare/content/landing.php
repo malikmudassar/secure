@@ -8,7 +8,7 @@
         <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
             <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
                 <li class="nav-item active menu_hide_border">
-                    <a class="menu_link_pading nav-link book-appointment-icon" href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
+                    <a class="menu_link_pading nav-link " href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
                 </li>                    
             </ul>
         </div>
@@ -16,68 +16,39 @@
 </nav>
     <div class="container">
         <div class="main-container">
-            <h1>Hi , Welcome to <strong>Dr. iQ</strong></h1>
+            <p style="margin-top:50px;">
+                Welcome to pathways content management. 
+                Here you can edit the content of pathways which includes questions, 
+                the answers associated to questions and their values.
+                <br><br>
+                You can also look the preview of pathway iteration, give your feedback on each step in feedback section.
+                <br><br>
+                <b>Note:</b> This interface is only for preview it does not send any pathway submission to any practice/GP.
+            </p>  
+            <p>
 
-            
+            </p>          
             <div class="mainContent maincontent-space doc_d_top_space">
 
                 <div class="row">
-                            
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="srvBox2 btnGradeSti">
-                                    <a href="<?php echo base_url().'selfcare/online'?>">
-                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/online-consultations.svg" alt="image" class="img-fluid">
-                                        <div class="srvIcon">Online Consultation</div>
-                                    </a>
-                                </div>
+                    <form action="<?php echo base_url().'selfcare/category'?>" method="post">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Please select the application</div>
+                                <select class="form-control">
+                                    <option value="">Dr-IQ</option>
+                                </select>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="srvBox2 btnGradeReg">
-                                    <a href="">
-                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/bookappointment.svg" alt="image" class="img-fluid">
-                                        <div class="srvIcon">Book Appointment</div>
-                                    </a>
-                                </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary"
+                                style="margin-top:16px; margin-left:14px"
+                                >Proceed</button>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="srvBox2 btnGradeChase">
-                                    <a href="">
-                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/medication.svg" alt="image" class="img-fluid">
-                                        <div class="srvIcon">Medications</div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6">
-                                <div class="srvBox2 btnGradeApp">
-                                    <a href="">
-                                        <img src="<?php echo ASSET_URL?>assets/dashboard_files/surger.svg" alt="image" class="img-fluid">
-                                        <div class="srvIcon">My Surgery</div>
-                                    </a>
-                                </div>
-                            </div>
-                    <div class="row">
-                        <!--<div class="col-md-4">
-                     <div class="srvBox2 btnGradeGp">
-                      <a href="#">
-                     <img src="/assets/images/dr-iq-web-app/call.png" alt="image" class="img-fluid">
-                      <div class="srvIcon">Call 111</div>
-                      </a>
-                    </div>
-                  </div>-->
-
-                    </div>
-
+                        </div>
+                    </form>  
                 </div><!--end mainContent-->
             </div><!--end maincontainer -->
 
-            <div class="get_the_app">
-                <h3>Download the App now</h3>
-                <div class="downloadThe-app">
-                    <ul>
-                        <li><a href="https://itunes.apple.com/us/app/dr-iq/id1345802108?ls=1&amp;mt=8" target="_blank"><img src="<?php echo ASSET_URL?>assets/dashboard_files/app.svg" alt="app store" class="img-fluid"></a></li>
-                        <li><a href="https://play.google.com/store/apps/details?id=com.attech.attech_android_1.driq" target="_blank"><img src="<?php echo ASSET_URL?>assets/dashboard_files/google-play-color.svg" alt="google play" class="img-fluid"></a></li>
-                    </ul>
-                </div>
-            </div><!--end get the app-->
+            
         </div><!--end container -->
     </div><!--end wrapper -->

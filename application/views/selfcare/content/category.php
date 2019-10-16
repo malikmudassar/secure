@@ -26,21 +26,28 @@
 
                    
 
-                    <h3>Please select one of the following life style to start the preview</h3>
+                    <h3>Please select one of the following categories</h3>
 
                     <div class="pathways-links row">
                         
-                        <?php for($i=0;$i<count($pathways);$i++){?>
                         <div class="col-lg-6 col-md-6 col-sm-12">
                             <div class="pathways-list">
-                                <a href="<?php echo base_url().'selfcare/p_view/'.$pathways[$i]['id']?>">
+                                <a href="<?php echo base_url().'selfcare/online/'?>">
                                     <img src="<?php echo ASSET_URL?>assets/selfcare_files/sickNote.png" class="img-fluid ">
-                                        <span><?php echo $pathways[$i]['name']?></span>
+                                        <span>Lifestyle</span>
                                         <i class="fa fa-angle-right"></i>
                                 </a>
                             </div>
                         </div>
-                    <?php }?>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="pathways-list">
+                                <a href="">
+                                    <img src="<?php echo ASSET_URL?>assets/selfcare_files/sickNote.png" class="img-fluid ">
+                                        <span>Consultations</span>
+                                        <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
                         <div class="clearfix"></div>
 
                     </div>

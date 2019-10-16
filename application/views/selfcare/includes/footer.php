@@ -24,14 +24,17 @@
 
 
 </div>
-
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/contact.js"></script>
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery_002.js"></script>
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/multiselect.js"></script>
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery-ui.js"></script>
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/bootstrap.js"></script>
-    <script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery.js"></script>
+</div></body></html>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/contact.js"></script>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery_002.js"></script>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/multiselect.js"></script>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery-ui.js"></script>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/bootstrap.js"></script>
+<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery.js"></script>
     
 
-
-</div></body></html>
+<script>
+    $('#btn-feedback').click(function(){
+        $('#feedback').submit();
+    });
+</script>

@@ -31,6 +31,67 @@ class Selfcare extends CI_Controller {
         $this->load->view('selfcare/includes/footer');
     }
 
+    public function category()
+    { 
+        $data['title']='Dr. IQ | Dashboard';
+        $this->load->view('selfcare/includes/head',$data);
+        $this->load->view('selfcare/includes/header');
+        $this->load->view('selfcare/content/category');
+        $this->load->view('selfcare/includes/footer');
+    }
+
+    public function edit_question()
+    {
+        $q=$this->uri->segment(4);
+        $p=$this->uri->segment(3);
+        $data['title']='Edit Question';
+        $data['question']=$this->admin_model->getAllById('questions', $q);
+        if($_POST)
+        {
+            $this->admin_model->updateQuestion($_POST, $q);
+            redirect(base_url().'selfcare/p_view/'.$p);
+        }
+        else
+        {
+            $this->load->view('selfcare/includes/head',$data);
+            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/content/edit_question');
+            $this->load->view('selfcare/includes/footer');
+        }
+    }
+
+    public function edit_answer()
+    {
+        $q=$this->uri->segment(3);
+        $data['title']='Edit Question';
+        $data['form']=$this->admin_model->getAnsForm($q);
+        $data['question']=$this->admin_model->getAllById('questions', $q);
+        // echo '<pre>';print_r($data);exit;
+        if($_POST)
+        {
+            // echo '<pre>';print_r($_POST);exit;
+            $this->admin_model->updateAnsData($_POST, $q);
+            redirect(base_url().'selfcare/p_view/'.$data['question']['pathway']);
+        }
+        else
+        {
+            $this->load->view('selfcare/includes/head',$data);
+            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/content/edit_answer');
+            $this->load->view('selfcare/includes/footer');
+        }
+    }
+
+    public function submit_feedback()
+    {
+        // echo '<pre>';print_r($_POST);exit;
+        $p=$this->uri->segment(3);
+        $step=$this->uri->segment(4);
+        $this->admin_model->submitFeedback($_POST, $step, $p);
+        $this->session->set_flashdata('success', 'Feedback submitted');
+        redirect(base_url().'selfcare/p_view/'.$p);
+    }
+
     public function online()
     { 
         $data['title']='Dr. IQ | Dashboard';
