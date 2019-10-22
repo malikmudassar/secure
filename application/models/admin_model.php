@@ -1463,7 +1463,7 @@ class Admin_model extends CI_Model {
                     } 
                 break;
                 case '==':
-                echo '<pre>result '.$result['value'].' ';echo ($condition['value']);exit;
+                // echo '<pre>result '.$result['value'].' ';echo ($condition['value']);exit;
                     if(isset($result[0]))
                     {
                         if($result[0]['value'] == $condition['value'])
