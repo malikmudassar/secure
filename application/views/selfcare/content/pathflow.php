@@ -54,7 +54,12 @@
                                     }
                                 }
                                 ?>
-                            required> <?php echo $form[$i]['caption']?> </input>
+                            required> 
+                            <?php if($question['id']>=421 && $question['id']<=424){?>
+                                <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.jpg'?>">
+                            <?php }else{?>
+                                <?php echo $form[$i]['caption']?> </input>
+                            <?php }?>
                         <?php }?>
                         <?php if($form[$i]['type']=='checkbox'){?>
                             <input class="w3-radio" type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" value='<?php echo $form[$i]['value']?>'
