@@ -56,7 +56,7 @@
                                 ?>
                             required> 
                             <?php if($question['id']>=421 && $question['id']<=424){?>
-                                <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.jpg'?>">
+                                <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.svg'?>">
                             <?php }else{?>
                                 <?php echo $form[$i]['caption']?> </input>
                             <?php }?>
