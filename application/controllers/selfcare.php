@@ -15,7 +15,7 @@ class Selfcare extends CI_Controller {
 
     public function index()
     { 
-        $data['title']='EZ Triage Builder';
+        $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/landing');
@@ -24,7 +24,7 @@ class Selfcare extends CI_Controller {
 
     public function landing()
     { 
-        $data['title']='EZ Triage Builder';
+        $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/landing');
@@ -33,7 +33,7 @@ class Selfcare extends CI_Controller {
 
     public function category()
     { 
-        $data['title']='EZ Triage Builder';
+        $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/category');
@@ -94,7 +94,7 @@ class Selfcare extends CI_Controller {
 
     public function online()
     { 
-        $data['title']='EZ Triage Builder';
+        $data['title']='EZ Triage';
         $data['pathways']=$this->admin_model->getPublishedPathways();
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
@@ -152,7 +152,7 @@ class Selfcare extends CI_Controller {
         if(!$data['question'])
         {
             $data['error']='No steps added against this pathway yet, Please Contact Administrator';
-            $data['title']='EZ Triage Builder';
+            $data['title']='EZ Triage';
             $this->load->view('selfcare/includes/head',$data);
             $this->load->view('selfcare/includes/header');
             $this->load->view('selfcare/content/error');
@@ -160,7 +160,7 @@ class Selfcare extends CI_Controller {
         }
         else
         {
-            $data['title']='EZ Triage Builder';
+            $data['title']='EZ Triage';
             $this->load->view('selfcare/includes/head',$data);
             $this->load->view('selfcare/includes/header');
             $this->load->view('selfcare/content/pathflow');
@@ -180,6 +180,7 @@ class Selfcare extends CI_Controller {
                 $this->admin_model->flush_pw_results($params['user_id'],$params['pathway']);
             }
             $this->admin_model->saveResult($params);
+            
             if(!$params['age'])
             {
                 $params['age']=21;
@@ -190,7 +191,7 @@ class Selfcare extends CI_Controller {
             }
 
             $data=$this->admin_model->getNextPathwayQuestion($params);
-
+            // echo 'question arrived';exit;
             $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
             
             if(!empty($data['form']))
@@ -215,7 +216,7 @@ class Selfcare extends CI_Controller {
             $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
             $data['p_name']=$pw['name'];
             $data['user_id']=$params['user_id'];
-            $data['title']='EZ Triage Builder';
+            $data['title']='EZ Triage';
             $this->load->view('selfcare/includes/head',$data);
             $this->load->view('selfcare/includes/header');
             $this->load->view('selfcare/content/pathflow');
@@ -290,7 +291,7 @@ class Selfcare extends CI_Controller {
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
 
-        $data['title']='EZ Triage Builder';
+        $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/head',$data);
         $this->load->view('selfcare/includes/header');
         $this->load->view('selfcare/content/pathflow');

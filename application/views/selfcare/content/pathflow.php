@@ -25,14 +25,20 @@
 <!--end navigation bar -->
 </div>
 <div class="container">
-    <div class="pathwaysContent maincontent-space" style="border:1px solid #ccc; background-color:#f0eded; margin-bottom:0px; padding-left:40px; padding-right:20px; margin-top:50px;">
+    <div class="pathwaysContent maincontent-space" style="border:1px solid #ccc; background-color:#ebeff9; margin-bottom:0px; padding-left:40px; padding-right:20px; margin-top:50px;">
         <div class="pathways" >
             
             <div class="login-form" >
-                <div class="form-group">
-                    <label><b><?php echo $question['statement']?></b></label><br>
-                    <a href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Question</a>
-                </div>
+                <?php if($question['type']=='alert'){?>
+                    <div style="width:100%; height:100px; padding-top:30px; padding-left:30px; font-size:16pt; background:red">
+                        <span style="color:white"><?php echo $question['statement']?></span>
+                    </div>
+                <?php } else {?>
+                    <div class="form-group">
+                        <label><b><?php echo $question['statement']?></b></label><br>
+                        <a href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Question</a>
+                    </div>
+                <?php }?>
                 <pre><?php //print_r($form)?></pre>
                 <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">    
                 <?php for($i=0;$i<count($form);$i++){?>

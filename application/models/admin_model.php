@@ -147,7 +147,7 @@ class Admin_model extends CI_Model {
         // echo '<pre>1';print_r($data); print_r($step);exit;
         $result=0;
         
-        if($step['type']=='question' || $step['type']=='info')
+        if($step['type']=='question' || $step['type']=='info' || $step['type']=='alert')
         {
            echo "<script>console.log('52. next step is question')</script>";
             $st=$this->db->query('select questions.* from questions inner join step_questions on step_questions.question=questions.id where step='.($step['id']))->result_array();
