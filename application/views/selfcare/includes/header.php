@@ -5,7 +5,7 @@
         <div class="container">
             <img src="<?php echo ASSET_URL.'assets/img/at-logo.png'?>" style="heigh:133px" />
             <div >
-                <h2 style="font-family:Arial">Triage Builder</h2>
+                <h2 style="font-family:Arial"><b>EZ</b>Triage</h2>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
