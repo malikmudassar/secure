@@ -17,13 +17,14 @@
     <div class="container">
         <div class="main-container">
             <p style="margin-top:50px;">
-                Welcome to pathways content management. 
-                Here you can edit the content of pathways which includes questions, 
+                Welcome to triage content management. 
+                Here you can edit the content of triage which includes questions, 
                 the answers associated to questions and their values.
                 <br><br>
-                You can also look the preview of pathway iteration, give your feedback on each step in feedback section.
+                You can also look the preview of triage iteration, give your feedback on each step in feedback section.
                 <br><br>
-                <b>Note:</b> This interface is only for preview it does not send any pathway submission to any practice/GP or book any appointment.
+                <b>Note:</b> This interface is only for preview it does not send any triage submission to any practice/GP or book any appointment.
+                <br><br>
             </p>  
             <p>
 
@@ -33,7 +34,7 @@
                 <div class="row">
                     <form action="<?php echo base_url().'selfcare/category'?>" method="post">
                         <div class="col-md-12">
-                            <div class="form-group">
+                            <div class="form-group" style='margin-bottom:0px !important'>
                                 <label>Please select the application</div>
                                 <select class="form-control">
                                     <option value="">Dr-IQ</option>
