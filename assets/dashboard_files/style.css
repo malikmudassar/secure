@@ -23,6 +23,16 @@ nav{
 #lnk_eq:hover {
     color:blue;
 }
+.h5-style {
+    color: #3c6cde;
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+    padding-top: 0.7em;
+    padding-left: 8px;
+    font-weight: 600;
+
+}
 .contact-us-header-panel p {
     font-family: 'Arial';
     color: #fff;
@@ -3578,7 +3588,7 @@ body.embed , a.powered-by
 }
 
 .nav-link span{
-    padding-top: 5px;
+    padding-top: 16px;
     display: inline-block;
     color: #9b9b9b;
 }
@@ -7377,3 +7387,4 @@ padding-right: 4px;
 .med-input select option, .optin-style {
    line-height: 20px;
 }
+

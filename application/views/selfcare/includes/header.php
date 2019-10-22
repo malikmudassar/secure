@@ -3,10 +3,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-seprater">
 
         <div class="container">
-            <img src="<?php echo ASSET_URL.'assets/img/at-logo.png'?>" style="heigh:133px" />
-            <div >
-                <h2 style="font-family:Arial"><b>EZ</b>Triage</h2>
+            
+            <div style="float:left">
+                <h1 style="font-family:lato; color:#1556e8"><b>EZ</b> Triage</h1>
             </div>
+            <img src="<?php echo ASSET_URL.'assets/img/at-logo.png'?>" style="heigh:133px; float:right" />
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
