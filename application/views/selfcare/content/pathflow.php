@@ -73,11 +73,11 @@
                 ?>
                 <?php for($i=0;$i<count($form);$i++){?>
                     <div class="form-group">
-                        <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal'){?>
+                        <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file'){?>
                             <div class="row">
                                 <div class="col-md-4">
                                     <label><?php echo $form[$i]['caption']?></label>
-                                    <input type="text" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
+                                    <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
                                     value="<?php echo $answer[$i]['value']?>">
                                 </div>
                             </div>
