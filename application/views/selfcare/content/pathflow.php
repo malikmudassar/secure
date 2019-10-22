@@ -97,7 +97,7 @@
                         // echo '</pre>';
                 ?>
                 <?php if($form[0]){?>    
-                    <a href="<?php echo base_url().'selfcare/edit_answer/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Answer</a>
+                    <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_answer/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Answer</a>
                 <?php }?>
                 <input type="hidden" name="pathway" value="<?php echo $question['pathway']?>">
                 <input type="hidden" name="user_id" value="1546">
