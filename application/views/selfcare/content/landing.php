@@ -23,7 +23,7 @@
                 <br><br>
                 You can also look the preview of pathway iteration, give your feedback on each step in feedback section.
                 <br><br>
-                <b>Note:</b> This interface is only for preview it does not send any pathway submission to any practice/GP.
+                <b>Note:</b> This interface is only for preview it does not send any pathway submission to any practice/GP or book any appointment.
             </p>  
             <p>
 
