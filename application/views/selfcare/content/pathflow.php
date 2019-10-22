@@ -36,7 +36,7 @@
                 <?php } else {?>
                     <div class="form-group">
                         <label><b><?php echo $question['statement']?></b></label><br>
-                        <a href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Question</a>
+                        <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i>Edit Question</a>
                     </div>
                 <?php }?>
                 <pre><?php //print_r($form)?></pre>

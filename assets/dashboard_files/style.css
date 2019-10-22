@@ -17,7 +17,12 @@ nav{
     color: #3c6cde !important;
 }
 */
-
+#lnk_eq {
+    color:#2db57f
+}
+#lnk_eq:hover {
+    color:blue;
+}
 .contact-us-header-panel p {
     font-family: 'Arial';
     color: #fff;
