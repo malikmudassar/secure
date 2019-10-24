@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>icon/Mute Copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calling-1" transform="translate(-507.000000, -739.000000)">
+            <g id="icon/Mute-Copy" transform="translate(507.000000, 739.000000)">
+                <circle id="Oval-8" fill="#FFFFFF" cx="49" cy="49" r="49"></circle>
+                <g id="mic" transform="translate(38.888889, 31.111111)" stroke="#3C6CDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.8">
+                    <path d="M10.8888889,3.45402719e-16 C8.31156006,-3.45402719e-16 6.22222222,2.08933783 6.22222222,4.66666667 L6.22222222,17.1111111 C6.22222222,19.6884399 8.31156006,21.7777778 10.8888889,21.7777778 C13.4662177,21.7777778 15.5555556,19.6884399 15.5555556,17.1111111 L15.5555556,4.66666667 C15.5555556,2.08933783 13.4662177,3.45402719e-16 10.8888889,3.45402719e-16 Z" id="Shape"></path>
+                    <path d="M21.7777778,14 L21.7777778,17.1111111 C21.7777777,23.1248783 16.9026561,27.9999998 10.8888889,27.9999998 C4.87512168,27.9999998 8.96121141e-08,23.1248783 -1.77635684e-15,17.1111111 L-1.77635684e-15,14" id="Shape"></path>
+                    <path d="M10.8888889,28 L10.8888889,34.2222222" id="Shape"></path>
+                    <path d="M4.66666667,34.2222222 L17.1111111,34.2222222" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="9px" viewBox="0 0 28 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>more-horizontal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Audio-Call-3" transform="translate(-667.000000, -18.000000)" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2.4">
+            <g id="more-horizontal" transform="translate(669.000000, 20.000000)">
+                <ellipse id="Oval" cx="12" cy="2.5" rx="2.4" ry="2.5"></ellipse>
+                <ellipse id="Oval" cx="21.6" cy="2.5" rx="2.4" ry="2.5"></ellipse>
+                <ellipse id="Oval" cx="2.4" cy="2.5" rx="2.4" ry="2.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

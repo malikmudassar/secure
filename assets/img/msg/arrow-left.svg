@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="18px" viewBox="0 0 23 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>arrow-left</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Bi-Directional-Message-Module" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="MR3" transform="translate(-13.000000, -19.000000)" stroke="#3C6CDE" stroke-width="2.4">
+            <g id="arrow-left" transform="translate(15.000000, 21.000000)">
+                <path d="M19,7 L0,7" id="Shape"></path>
+                <polyline id="Shape" points="7.125 14 0 7 7.125 0"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

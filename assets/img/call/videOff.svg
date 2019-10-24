@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Audio-Call" transform="translate(-671.000000, -739.000000)">
+            <g id="Group-2" transform="translate(671.000000, 739.000000)">
+                <circle id="Oval-8" fill="#FFFFFF" cx="49" cy="49" r="49"></circle>
+                <g id="video-off" transform="translate(32.000000, 32.000000)" stroke="#3C6CDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.24">
+                    <path d="M23.8636364,23.8636364 L23.8636364,25.4545455 C23.8636364,27.2118151 22.4390878,28.6363636 20.6818182,28.6363636 L3.18181818,28.6363636 C1.42454852,28.6363636 3.53252781e-16,27.2118151 0,25.4545455 L0,9.54545455 C-1.7662639e-16,7.78818489 1.42454852,6.36363636 3.18181818,6.36363636 L6.36363636,6.36363636 M15.3681818,6.36363636 L20.6818182,6.36363636 C22.4390878,6.36363636 23.8636364,7.78818489 23.8636364,9.54545455 L23.8636364,14.8590909 L25.4545455,16.45 L35,9.54545455 L35,25.4545455" id="Shape"></path>
+                    <path d="M0,0 L35,35" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53 (72520) - https://sketchapp.com -->
+    <title>bell</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Web-App-v2-Practice-side" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Practice-Home-Dashboard" transform="translate(-949.000000, -27.000000)" stroke="#3C6CDE" stroke-width="2">
+            <g id="bell" transform="translate(950.000000, 28.000000)">
+                <path d="M20,15 L0,15 C1.65685425,15 3,13.6568542 3,12 L3,7 C3.00000006,3.13400679 6.13400679,1.04308127e-07 10,1.04308127e-07 C13.8659932,1.04308128e-07 16.9999999,3.13400679 17,7 L17,12 C17,13.6568542 18.3431458,15 20,15 L20,15 Z M11.73,19 C11.3722022,19.6168043 10.7130686,19.9964563 10,19.9964563 C9.28693139,19.9964563 8.62779776,19.6168043 8.27,19 L11.73,19 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="16px" viewBox="0 0 15 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>calendar</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Appointments-Configuration-Module" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Manage-session-3" transform="translate(-819.000000, -250.000000)" stroke="#9B9B9B" stroke-width="1.4">
+            <g id="calendar" transform="translate(820.000000, 251.000000)">
+                <rect id="Rectangle-path" x="0" y="1.4" width="13" height="12.6" rx="1.4"></rect>
+                <path d="M9.38888889,0 L9.38888889,2.8" id="Shape"></path>
+                <path d="M3.61111111,0 L3.61111111,2.8" id="Shape"></path>
+                <path d="M0,5.6 L13,5.6" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

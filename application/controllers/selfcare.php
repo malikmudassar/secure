@@ -34,8 +34,7 @@ class Selfcare extends CI_Controller {
     public function category()
     { 
         $data['title']='EZ Triage';
-        $this->load->view('selfcare/includes/head',$data);
-        $this->load->view('selfcare/includes/header');
+        $this->load->view('selfcare/includes/header',$data);
         $this->load->view('selfcare/content/category');
         $this->load->view('selfcare/includes/footer');
     }
@@ -53,8 +52,7 @@ class Selfcare extends CI_Controller {
         }
         else
         {
-            $this->load->view('selfcare/includes/head',$data);
-            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/edit_question');
             $this->load->view('selfcare/includes/footer');
         }
@@ -75,8 +73,7 @@ class Selfcare extends CI_Controller {
         }
         else
         {
-            $this->load->view('selfcare/includes/head',$data);
-            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/edit_answer');
             $this->load->view('selfcare/includes/footer');
         }
@@ -96,8 +93,7 @@ class Selfcare extends CI_Controller {
     { 
         $data['title']='EZ Triage';
         $data['pathways']=$this->admin_model->getPublishedPathways();
-        $this->load->view('selfcare/includes/head',$data);
-        $this->load->view('selfcare/includes/header');
+        $this->load->view('selfcare/includes/header', $data);
         $this->load->view('selfcare/content/pathways');
         $this->load->view('selfcare/includes/footer');
     }
@@ -161,8 +157,7 @@ class Selfcare extends CI_Controller {
         else
         {
             $data['title']='EZ Triage';
-            $this->load->view('selfcare/includes/head',$data);
-            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/pathflow');
             $this->load->view('selfcare/includes/footer');
         }
@@ -172,6 +167,7 @@ class Selfcare extends CI_Controller {
     {
         if($_POST)
         {
+            // echo '<pre>';print_r($_POST);exit;
             $params=$_REQUEST;
         
             $params['user_id']=1546;
@@ -217,8 +213,7 @@ class Selfcare extends CI_Controller {
             $data['p_name']=$pw['name'];
             $data['user_id']=$params['user_id'];
             $data['title']='EZ Triage';
-            $this->load->view('selfcare/includes/head',$data);
-            $this->load->view('selfcare/includes/header');
+            $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/pathflow');
             $this->load->view('selfcare/includes/footer');
         }
@@ -292,8 +287,7 @@ class Selfcare extends CI_Controller {
         $data['p_name']=$pw['name'];
 
         $data['title']='EZ Triage';
-        $this->load->view('selfcare/includes/head',$data);
-        $this->load->view('selfcare/includes/header');
+        $this->load->view('selfcare/includes/header',$data);
         $this->load->view('selfcare/content/pathflow');
         $this->load->view('selfcare/includes/footer');
     }

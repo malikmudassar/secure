@@ -37,8 +37,7 @@ class Login extends CI_Controller {
                 if($this->form_validation->run()==false)
                 {
                     $data['errors']=validation_errors();
-                    $data['title']='Dr. IQ | Dashboard';
-                    $this->load->view('selfcare/includes/head',$data);
+                    $data['title']='EZ Triage';
                     $this->load->view('selfcare/includes/header');
                     $this->load->view('selfcare/content/login');
                     $this->load->view('selfcare/includes/footer');
@@ -55,8 +54,7 @@ class Login extends CI_Controller {
                     else
                     {
                         $data['errors']='The credentials you have provided are incorrect or your account has not been approved yet.';
-                        $data['title']='Dr. IQ | Dashboard';
-                        $this->load->view('selfcare/includes/head',$data);
+                        $data['title']='EZ Triage';
                         $this->load->view('selfcare/includes/header');
                         $this->load->view('selfcare/content/login');
                         $this->load->view('selfcare/includes/footer');
@@ -65,8 +63,7 @@ class Login extends CI_Controller {
             }
             else
             {
-                $data['title']='Dr. IQ | Dashboard';
-                $this->load->view('selfcare/includes/head',$data);
+                $data['title']='EZ Triage';
                 $this->load->view('selfcare/includes/header');
                 $this->load->view('selfcare/content/login');
                 $this->load->view('selfcare/includes/footer');

@@ -1,51 +1,101 @@
-<div class="dashboard-navigation-bar">
-    <!--start navigation bar -->
+<!-- Page Content -->
+<div class="container mid-container ">
+    <div class="row">
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#1556e8 !important">
-    <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive_d" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon"></span> -->
-        </button>
-        <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
-            <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
-                <li class="nav-item active menu_hide_border">
-                    <a class="menu_link_pading nav-link " href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
-                </li>                    
-            </ul>
-        </div>
-    </div>
-</nav>
+ 
+    <div class="row col-lg-12">
+       
+         <div class="col-lg-12">
+          <h1 class="pageHeading">Life Styles</h1> </div>
+   
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Alcohol.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+                <a href="<?php echo base_url().'selfcare/p_view/2'?>"><h3>Alcohol</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
+   
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/activity.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+					<a href="<?php echo base_url().'selfcare/p_view/5'?>"><h3>Activity</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
+   
+    	<!-- <div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/chase-a-refferal.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+    				<h3>BMI</h3>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div> -->
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Smoking.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+					<a href="<?php echo base_url().'selfcare/p_view/4'?>"><h3>Smoking</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Rash.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+				<a href="<?php echo base_url().'selfcare/p_view/17'?>"><h3>Rash</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
+    	<!-- <div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/indigestion.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+    				<h3>Wellbeing</h3>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div> -->
+    	<!-- <div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Headache.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+    				<h3>Headache </h3>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div> -->
+    	
+    
+      
+    </div> <!-- col 12 -->
+    </div> <!-- row -->
+  </div>  <!-- container -->
 
+
+<!-- <a href="<?php //echo base_url().'selfcare/p_view/'.$pathways[$i]['id']?>"> -->
 <!--end navigation bar -->
 </div>
-<div class="wrapper pathways-page">
-        <div class="container">
-            <div class="pathwaysContent maincontent-space">
-                <div class="pathways">
-
-                   
-
-                    <h3>Please select one of the following life style to start the preview</h3>
-
-                    <div class="pathways-links row">
-                        
-                        <?php for($i=0;$i<count($pathways);$i++){?>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="pathways-list">
-                                <a href="<?php echo base_url().'selfcare/p_view/'.$pathways[$i]['id']?>">
-                                    <img src="<?php echo ASSET_URL?>assets/selfcare_files/sickNote.png" class="img-fluid ">
-                                        <span><?php echo $pathways[$i]['name']?></span>
-                                        <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    <?php }?>
-                        <div class="clearfix"></div>
-
-                    </div>
-
-                </div><!--end pathways-->
-            </div>
-        </div><!--end container -->
-    </div>

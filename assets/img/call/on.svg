@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calling-1" transform="translate(-671.000000, -739.000000)">
+            <g id="Group-2" transform="translate(671.000000, 739.000000)">
+                <circle id="Oval-8" fill="#FFFFFF" cx="49" cy="49" r="49"></circle>
+                <g id="Speaker" transform="translate(29.000000, 35.000000)" stroke="#3C6CDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.591">
+                    <polygon id="Shape" fill="#3C6CDE" points="17.8571429 0.54375 7.93650794 8.51875 0 8.51875 0 20.48125 7.93650794 20.48125 17.8571429 28.45625"></polygon>
+                    <path d="M33.8690476,0.4041875 C41.614721,8.18977829 41.614721,20.8102217 33.8690476,28.5958125 M26.8650794,7.442125 C30.7379161,11.3349204 30.7379161,17.6451421 26.8650794,21.5379375" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

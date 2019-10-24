@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calling--2" transform="translate(-507.000000, -739.000000)">
+            <g id="Group-2" transform="translate(507.000000, 739.000000)">
+                <g id="icon/Mute-Copy" fill="#FFFFFF">
+                    <circle id="Oval-8" cx="49" cy="49" r="49"></circle>
+                </g>
+                <g id="mic-off" transform="translate(33.000000, 32.000000)" stroke="#3C6CDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.772">
+                    <path d="M0,0.0907407407 L34.2222222,32.887037" id="Shape"></path>
+                    <path d="M12.4444444,12.0166667 L12.4444444,16.4888889 C12.4461035,18.2965113 13.5830803,19.9254384 15.3258092,20.6169705 C17.0685382,21.3085026 19.0743042,20.926647 20.4088889,19.6492593 M21.7777802,12.5235185 L21.7777778,4.56296296 C21.7801873,2.26534492 19.965485,0.339795932 17.5801074,0.108888175 C15.1947299,-0.122019582 13.0148714,1.41685054 12.5377778,3.66851852" id="Shape"></path>
+                    <path d="M24.8888889,23.8680556 C21.7823808,26.9067476 17.0621016,27.8341057 12.9585497,26.2119203 C8.85499772,24.5897349 6.18974692,20.7427846 6.22222222,16.4888889 L6.22222222,13.5074074 M28,13.5074074 L28,16.4888889 C27.9994412,17.10373 27.9421814,17.7173207 27.8288889,18.3225" id="Shape"></path>
+                    <path d="M17.1111111,26.9240741 L17.1111111,32.887037" id="Shape"></path>
+                    <path d="M10.8888889,32.887037 L23.3333333,32.887037" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

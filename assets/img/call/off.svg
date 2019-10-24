@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Audio/Video-Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Calling--2" transform="translate(-671.000000, -739.000000)">
+            <g id="Group-3" transform="translate(671.000000, 739.000000)">
+                <circle id="Oval-8" fill="#FFFFFF" cx="49" cy="49" r="49"></circle>
+                <g id="volume-x" transform="translate(28.000000, 35.000000)" stroke="#3C6CDE" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.84">
+                    <polygon id="Shape" fill="#3C6CDE" points="18.8571429 0 8.38095238 8.57142857 0 8.57142857 0 21.4285714 8.38095238 21.4285714 18.8571429 30"></polygon>
+                    <path d="M44,8.57142857 L31.4285714,21.4285714" id="Shape"></path>
+                    <path d="M31.4285714,8.57142857 L44,21.4285714" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

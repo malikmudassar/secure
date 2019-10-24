@@ -1,40 +1,22 @@
-<div class="footer">
-    
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="copyright-d">
-                <p>© Dr. iQ <?php echo date('Y');?>. All Rights Reserved</p>
-            </div>
-        </div>
-
-        
-
+<footer class="sticky-footer">
+        <div class="container-fluid bg-white footer-btm">
+          <nav class="navbar navbar-expand-lg ">
+                <div class="container px-0">
+              		<div class="navbar-brand copyright-footer footer-list-item span" >
+              		<span><i class="fa fa-copyright"></i> EZ Triage <?php echo date('Y')?>. </span><span>All rights reserved.</span>
+              		</div>
+                      <p> Powered by <img src="<?php echo ASSET_URL?>assets/img/dashboard/attech.svg" alt="AT Tech" class="img-fluid attech-logo"></p>
+                </div>
+          </nav>
 
     </div>
-</div><!--end container -->
+</footer>
 
 
+  <script src="<?php echo ASSET_URL?>assets/jquery/jquery.min.js"></script>
+  <script src="<?php echo ASSET_URL?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+</body>
 
+</html>
 
-
-
-
-
-
-</div>
-</div></body></html>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/contact.js"></script>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery_002.js"></script>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/multiselect.js"></script>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery-ui.js"></script>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/bootstrap.js"></script>
-<script src="<?php echo ASSET_URL?>assets/dashboard_files/jquery.js"></script>
-    
-
-<script>
-    $('#btn-feedback').click(function(){
-        $('#feedback').submit();
-    });
-</script>

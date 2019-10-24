@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="36px" viewBox="0 0 28 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Icon/Pathways/RSN</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Pathways/RSN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sick-Note" transform="translate(4.000000, 6.000000)" stroke="#25C09E" stroke-width="2.5344">
+            <path d="M13.125,0 L2.625,0 C1.17525253,0 0,1.11928812 0,2.5 L0,22.5 C0,23.8807119 1.17525253,25 2.625,25 L18.375,25 C19.8247475,25 21,23.8807119 21,22.5 L21,7.5 L13.125,0 Z" id="Shape"></path>
+            <polyline id="Shape" points="13.125 0 13.125 7.5 21 7.5"></polyline>
+            <line x1="15.75" y1="13.75" x2="5.25" y2="13.75" id="Shape"></line>
+            <line x1="15.75" y1="18.75" x2="5.25" y2="18.75" id="Shape"></line>
+            <polyline id="Shape" points="7.875 8.75 6.5625 8.75 5.25 8.75"></polyline>
+        </g>
+    </g>
+</svg>

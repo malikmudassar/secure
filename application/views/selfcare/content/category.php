@@ -1,58 +1,41 @@
-<div class="dashboard-navigation-bar">
-    <!--start navigation bar -->
+  <!-- Page Content -->
+  <div class="container mid-container ">
+    <div class="row">
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top dashboard-top-fix" style="background-color:#1556e8 !important">
-    <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive_d" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon"></span> -->
-        </button>
-        <div class="navbar-collapse doc_dashboard_m_hide" id="navbarResponsive_d">
-            <ul class="navbar-nav dashboard-menu doc_menu_ul_list">
-                <li class="nav-item active menu_hide_border">
-                    <a class="menu_link_pading nav-link " href="<?php echo base_url().'selfcare'?>"><span style="color:#fff;">Home</span></a>
-                </li>                    
-            </ul>
-        </div>
-    </div>
-</nav>
+ 
+    <div class="row col-lg-12">
+       
+         <div class="col-lg-12">
+          <h1 class="pageHeading">Select Category</h1> </div>
 
-<!--end navigation bar -->
-</div>
-<div class="wrapper pathways-page">
-        <div class="container">
-            <div class="pathwaysContent maincontent-space">
-                <div class="pathways">
+   
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/general.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+    				<a href="<?php echo base_url().'selfcare/online/'?>"><h3>Life Style</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
+   
+    	<div class="col-lg-4">
+    		<div class="pathWay">
+    			<div class="icon-path">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/allergies.svg" alt="icon" class="img-fluid">
+    			</div>
+    			<div style="display: inline-block;">
+    				<a href=""><h3>Online Consultations</h3></a>
+    			</div>
+    	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+    		</div>
+    	</div>
 
-                   
-
-                    <h3>Please select one of the following categories</h3>
-
-                    <div class="pathways-links row">
-                        
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="pathways-list">
-                                <a href="<?php echo base_url().'selfcare/online/'?>">
-                                    <img src="<?php echo ASSET_URL?>assets/selfcare_files/sickNote.png" class="img-fluid ">
-                                        <span>Lifestyle</span>
-                                        <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <div class="pathways-list">
-                                <a href="">
-                                    <img src="<?php echo ASSET_URL?>assets/selfcare_files/sickNote.png" class="img-fluid ">
-                                        <span>Consultations</span>
-                                        <i class="fa fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-
-                    </div>
-
-                </div><!--end pathways-->
-            </div>
-        </div><!--end container -->
-    </div>
+    
+      
+    </div> <!-- col 12 -->
+    </div> <!-- row -->
+  </div>  <!-- container -->

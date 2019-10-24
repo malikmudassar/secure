@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="36px" viewBox="0 0 28 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Icon/Pathways/chase-a-refferal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/Pathways/chase-a-refferal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chase-a-rfferal" transform="translate(3.000000, 5.000000)">
+            <g id="home" stroke-linecap="round" stroke-linejoin="round" stroke="#5622D2" stroke-width="2.448">
+                <path d="M0,8.75 L11,0 L22,8.75 L22,22.5 C22,23.8807119 20.9055849,25 19.5555556,25 L2.44444444,25 C1.09441506,25 0,23.8807119 0,22.5 L0,8.75 Z" id="Shape"></path>
+            </g>
+            <g id="+" transform="translate(7.000000, 2.000000)" fill="#5622D2" font-family="Helvetica" font-size="16.2" font-weight="normal">
+                <text>
+                    <tspan x="0" y="15">+</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
