@@ -257,10 +257,7 @@ class Selfcare extends CI_Controller {
             {
                 $data['answer'][0]=array();
             }
-            if(count($data['answer'][0]>1))
-            {
-                $data['answer']=$data['answer'][0];
-            }
+            
         }
          
         
