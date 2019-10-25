@@ -257,6 +257,10 @@ class Selfcare extends CI_Controller {
             {
                 $data['answer'][0]=array();
             }
+            if(count($data['answer'][0]>1))
+            {
+                $data['answer']=$data['answer'][0];
+            }
         }
          
         
@@ -285,7 +289,7 @@ class Selfcare extends CI_Controller {
         $data['user_id']=$params['user_id'];
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
-
+        // echo '<pre>';print_r($data);exit;
         $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/header',$data);
         $this->load->view('selfcare/content/pathflow');
