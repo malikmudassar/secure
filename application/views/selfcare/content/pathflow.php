@@ -27,7 +27,18 @@
                             <?php 
                             if(!empty($answer))
                             {
-                                if($form[$i]['value']==$answer[0]['value'])
+                                // echo 'Answer not empty';exit;
+                                if(count($answer[0][0])>0)
+                                {
+                                    $val=$answer[0][$i]['value'];
+                                }
+                                else
+                                {
+                                    $val=$answer[0]['value'];
+                                }
+                                
+                                
+                                if($form[$i]['value']==($val))
                                 {
                                     echo 'checked';
                                 }
@@ -39,7 +50,9 @@
                                 <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.svg'?>" style="height:65px; width:65px;">
                             <?php }else{?>
                                 <?php echo $form[$i]['caption']?> </input>
-                            <?php }?>
+                            <?php }
+                            // echo '$value :'.$value;exit;
+                            ?>
                         </label>
                 
                 <?php }?>
@@ -61,16 +74,15 @@
             <?php for($i=0;$i<count($form);$i++){?>
                     <div class="form-group">
                         <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file'){?>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <label><?php echo $form[$i]['caption']?></label>
-                                    <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
-                                    value="<?php echo $answer[$i]['value']?>">
-                                </div>
-                            </div>
+                            <label><?php echo $form[$i]['caption'];?></label>
+                            <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
+                            value="<?php echo $answer[0][0]['value']?$answer[0][$i]['value']:$answer[$i]['value'];?>">
+                                
                         <?php }?>
+                        
                     </div>
             <?php }?>
+            
                 <?php if($form[0]){?>    
                     <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_answer/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit Answer</a>
                 <?php }?>
@@ -103,6 +115,9 @@
                     </div>
                 </div>
             </div>
+            <pre>
+            <?php //echo '$value :';print_r($val).'<br>';echo '<br>';print_r($answer); print_r($form); ?>
+            </pre>
         </form>
         <div class="clearfix"></div>
         <div class="container">
