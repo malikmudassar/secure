@@ -20,7 +20,7 @@
         <?php }?>
         <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">    
             <?php for($i=0;$i<count($form);$i++){?>
-                <div class="inputGroup">
+                <div class="inputGroup" style="width:50%">
                 <?php if($form[$i]['type']=='radio'){?>
                     
                         <input id="option_<?php echo $i+1;?>" name="<?php echo $form[$i]['name']?>" type="radio" value='<?php echo $form[$i]['value']?>'
@@ -58,7 +58,7 @@
                 <?php }?>
                 </div>
                 <?php if($form[$i]['type']=='checkbox'){?>
-                    <div class="inputGroup">
+                    <div class="inputGroup" style="width:50%">
                         <input id="option<?php echo $i+1?>" name="<?php echo $form[$i]['name']?>" type="checkbox" value="<?php echo $form[$i]['value']?>"
                             <?php 
                                 if(in_array($form[$i]['value'], explode(',', $answer[0]['value'])))
