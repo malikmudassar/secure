@@ -5,7 +5,7 @@
     <!-- -->
  
 
-    <div class="col-lg-6">
+    <div class="col-lg-12">
 
         <?php if($question['type']=='alert'){?>            
             <div style="width:100%; height:100px; padding-top:30px; padding-left:30px; font-size:16pt; background:red">
