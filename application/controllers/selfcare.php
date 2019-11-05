@@ -97,6 +97,15 @@ class Selfcare extends CI_Controller {
         $this->load->view('selfcare/content/pathways');
         $this->load->view('selfcare/includes/footer');
     }
+
+    public function consultations()
+    { 
+        $data['title']='EZ Triage';
+        $data['pathways']=$this->admin_model->getPublishedPathways();
+        $this->load->view('selfcare/includes/header', $data);
+        $this->load->view('selfcare/content/consultations');
+        $this->load->view('selfcare/includes/footer');
+    }
     public function p_view()
     {
         $this->session->set_userdata('flag','white');
@@ -145,6 +154,7 @@ class Selfcare extends CI_Controller {
         
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
+        // echo '<pre>';print_r($data);exit;
         if(!$data['question'])
         {
             $data['error']='No steps added against this pathway yet, Please Contact Administrator';
@@ -257,6 +267,10 @@ class Selfcare extends CI_Controller {
             {
                 $data['answer'][0]=array();
             }
+            // if(count($data['answer'][0][0]>0))
+            // {
+            //     $data['answer']=$data['answer'][0];
+            // }
             
         }
          

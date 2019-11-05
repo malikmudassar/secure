@@ -28,7 +28,7 @@
     				<img src="<?php echo ASSET_URL?>assets/img/pathways/allergies.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
-    				<a href=""><h3>Online Consultations</h3></a>
+    				<a href="<?php echo base_url().'selfcare/consultations/'?>"><h3>Online Consultations</h3></a>
     			</div>
     	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
     		</div>
