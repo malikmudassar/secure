@@ -109,7 +109,7 @@
                                 <?php }?>
                             </button>
                             <?php }else{?>
-                                <a href="<?php echo base_url().'selfcare/online'?>" class="btn btn-default "> Finish </a>
+                                <a href="<?php echo base_url().'selfcare/category'?>" class="btn btn-default "> Finish </a>
                             <?php }?>
                         </div>
                     </div>
