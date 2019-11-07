@@ -13,7 +13,7 @@
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
-    				<img src="<?php echo ASSET_URL?>assets/img/pathways/general.svg" alt="icon" class="img-fluid">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Lifestyle.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
     				<a href="<?php echo base_url().'selfcare/online/'?>"><h3>Life Style</h3></a>
@@ -25,7 +25,7 @@
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
-    				<img src="<?php echo ASSET_URL?>assets/img/pathways/allergies.svg" alt="icon" class="img-fluid">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/Online-Consultation.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
     				<a href="<?php echo base_url().'selfcare/consultations/'?>"><h3>Online Consultations</h3></a>
