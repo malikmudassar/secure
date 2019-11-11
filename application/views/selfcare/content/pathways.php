@@ -43,6 +43,7 @@
     	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
     		</div>
     	</div>
+		
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
