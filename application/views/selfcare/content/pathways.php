@@ -1,5 +1,12 @@
 <!-- Page Content -->
 <div class="container mid-container ">
+	<div class="row" style="background-color:#e9ecef; margin-bottom:10px;">
+            <ul class="breadcrumb">
+                <li> <a href="<?php echo base_url().'selfcare'?>">Home</a></li>
+                <li style="padding-left:10px"> <a href="<?php echo base_url().'selfcare/category'?>">Categories</a></li>
+                <li style="padding-left:10px"> Life Style </li>
+            </ul>
+    </div>
     <div class="row">
 
 
@@ -43,7 +50,7 @@
     	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
     		</div>
     	</div>
-		
+
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">

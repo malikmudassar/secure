@@ -349,7 +349,57 @@ class Selfcare extends CI_Controller {
         $data['title']='EZ Triage';
         if($_POST)
         {
+            if($_POST['feet']>0)
+            {
+                $height=($_POST['feet']*30)+($_POST['inches']*2.54);
+            }
+            if($_POST['cm']>0)
+            {
+                $height=$_POST['cm'];
+            }
+            if($_POST['stone']>0)
+            {
+                $weight=($_POST['stones']*6.35)+($_POST['pounds']*0.45);
+            }
+            if($_POST['kg']>0)
+            {
+                $weight=$_POST['kg'];
+            }
+            $data['bmi']=(($weight)/(($height*$height)/10000));
+            if($data['bmi']<15)
+            {
+                $data['category']='very severely underweight';
+            }
+            elseif($data['bmi'] >=15 && $data['bmi'] <=15.99)
+            {
+                $data['category']='severely underweight';
+            }     
+            elseif($data['bmi'] >=16 && $data['bmi'] <=18.50)
+            {
+                $data['category']='underweight';
+            } 
+            elseif($data['bmi'] >= 18.50 && $data['bmi'] <=25)
+            {
+                $data['category']='normal (healthy weight)';
+            } 
+            elseif($data['bmi'] >25 && $data['bmi'] <=30)
+            {
+                $data['category']='overweight';
+            } 
+            elseif($data['bmi'] > 30 && $data['bmi'] <=35)
+            {
+                $data['category']='moderately obese';
+            } 
+            elseif($data['bmi'] >35 && $data['bmi'] <=40)
+            {
+                $data['category']='severely obese';
+            } 
+            elseif($data['bmi'] > 40)
+            {
+                $data['category']='very severely obese';
+            } 
             
+            // echo $data['bmi']; exit;
             $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/bmi');
             $this->load->view('selfcare/includes/footer');

@@ -1,5 +1,11 @@
   <!-- Page Content -->
   <div class="container mid-container ">
+  	<div class="row" style="background-color:#e9ecef; margin-bottom:10px;">
+            <ul class="breadcrumb">
+                <li> <a href="<?php echo base_url().'selfcare'?>">Home</a></li>
+                <li style="padding-left:10px"> Category </li>
+            </ul>
+     </div>
     <div class="row">
 
 
