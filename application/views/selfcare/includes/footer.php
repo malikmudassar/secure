@@ -19,4 +19,23 @@
 </body>
 
 </html>
-
+<script>
+$(document).ready(function(){
+      $('#lnkCm').click(function(){
+            $('#feet').hide();
+            $('#cm').show();
+      });
+      $('#lnkft').click(function(){
+            $('#cm').hide();
+            $('#feet').show();
+      });
+      $('#lnkst').click(function(){
+            $('#stone').hide();
+            $('#kg').show();
+      });
+      $('#lnkkg').click(function(){
+            $('#kg').hide();
+            $('#stone').show();
+      });
+});
+</script>

@@ -32,17 +32,17 @@
     		</div>
     	</div>
    
-    	<!-- <div class="col-lg-4">
+    	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
     				<img src="<?php echo ASSET_URL?>assets/img/pathways/chase-a-refferal.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
-    				<h3>BMI</h3>
+    				<a href="<?php echo base_url().'selfcare/bmi'?>"><h3>BMI</h3></a>
     			</div>
     	       <img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
     		</div>
-    	</div> -->
+    	</div>
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">

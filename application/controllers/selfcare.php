@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: sun rise
+ * User: Khani
  * Date: 11/20/2016
  * Time: 2:37 PM
  */
@@ -111,7 +111,7 @@ class Selfcare extends CI_Controller {
         $this->session->set_userdata('flag','white');
         $Id=$this->uri->segment(3);
 
-        $user_id=1546;
+        $user_id=$this->session->userdata['id'];
         $params['gender']='male';
         $params['age']='29';
         
@@ -180,7 +180,7 @@ class Selfcare extends CI_Controller {
             // echo '<pre>';print_r($_POST);exit;
             $params=$_REQUEST;
         
-            $params['user_id']=1546;
+            $params['user_id']=$this->session->userdata['id'];
             if($params['step']==1)
             {
                 $this->admin_model->flush_pw_results($params['user_id'],$params['pathway']);
@@ -238,7 +238,7 @@ class Selfcare extends CI_Controller {
         $params['pathway']=$this->uri->segment(3);
         $params['step']=$this->uri->segment(4);
         $params['next']=$this->uri->segment(5);
-        $params['user_id']=1546;
+        $params['user_id']=$this->session->userdata['id'];
         
         $step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
 
@@ -310,6 +310,57 @@ class Selfcare extends CI_Controller {
     public function pathway_preview()
     {
         $user_id=1;
+    }
+
+    public function profile()
+    {
+        if($this->session->userdata['id'])
+        {
+            $id=$this->session->userdata['id'];
+            $data['user']=$this->admin_model->getAllById('users', $id);
+            $data['title']='EZ Triage';
+            // echo '<pre>';print_r($data);exit;
+            if($_POST)
+            {
+                // echo '<pre>';print_r($_POST);exit;
+                $this->admin_model->updateProfile($_POST, $id);
+                $data['success']='Profile Updated Successfully';
+                $data['user']=$this->admin_model->getAllById('users', $id);
+                $this->load->view('selfcare/includes/header',$data);
+                $this->load->view('selfcare/content/profile');
+                $this->load->view('selfcare/includes/footer');
+            }
+            else
+            {
+                $this->load->view('selfcare/includes/header',$data);
+                $this->load->view('selfcare/content/profile');
+                $this->load->view('selfcare/includes/footer');
+            }
+            
+        }
+        else
+        {
+            redirect(base_url().'admin/logout');
+        }
+    }
+
+    public function bmi()
+    {
+        $data['title']='EZ Triage';
+        if($_POST)
+        {
+            
+            $this->load->view('selfcare/includes/header',$data);
+            $this->load->view('selfcare/content/bmi');
+            $this->load->view('selfcare/includes/footer');
+        }
+        else
+        {
+            $this->load->view('selfcare/includes/header',$data);
+            $this->load->view('selfcare/content/bmi');
+            $this->load->view('selfcare/includes/footer');
+        }
+        
     }
 
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: sun rise
+ * User: Khani
  * Date: 8/2/2016
  * Time: 3:48 PM
  */
@@ -7973,6 +7973,12 @@ class Admin_model extends CI_Model {
     {
         $st=$this->db->select('name')->from('pathways')->where('id', $id)->get()->result_array();
         return $st[0]['name'];
+    }
+
+    public function updateProfile($data, $id)
+    {
+        $this->db->where('id', $id)->update('users', $data);
+        return true;
     }
 
 }
