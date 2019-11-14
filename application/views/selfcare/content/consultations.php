@@ -19,7 +19,7 @@
     	<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
-    				<img src="<?php echo ASSET_URL?>assets/img/pathways/chase-a-refferal.svg" alt="icon" class="img-fluid">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/allergies.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
 				<a href="<?php echo base_url().'selfcare/p_view/19'?>"><h3>Allergies</h3></a>
@@ -30,7 +30,7 @@
 		<div class="col-lg-4">
     		<div class="pathWay">
     			<div class="icon-path">
-    				<img src="<?php echo ASSET_URL?>assets/img/pathways/allergies.svg" alt="icon" class="img-fluid">
+    				<img src="<?php echo ASSET_URL?>assets/img/pathways/chase-a-refferal.svg" alt="icon" class="img-fluid">
     			</div>
     			<div style="display: inline-block;">
 				<a href="<?php echo base_url().'selfcare/p_view/22'?>"><h3>Chase a referral</h3></a>
