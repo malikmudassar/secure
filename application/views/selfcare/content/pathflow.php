@@ -127,7 +127,7 @@
             </pre>
         </form>
         <div class="clearfix"></div>
-        <div class="container">
+        <div class="row">
                 <div class="col-md-6 col-sm-12">
                         <?php if($this->session->flashdata('success')){?>
                                 <span style="margin-left:-15px;" class="alert alert-success"> Feedback submitted </span>
