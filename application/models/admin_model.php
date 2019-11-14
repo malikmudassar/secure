@@ -6768,12 +6768,13 @@ class Admin_model extends CI_Model {
         $this->db->where('id', $q)->update('questions', $item);
     }
 
-    public function submitFeedback($data, $step, $p)
+    public function submitFeedback($data, $step, $p, $user)
     {
         $item=array(
             'feedback'  => $data['feedback'],
             'step'      => $step,
-            'pathway'   => $p
+            'pathway'   => $p,
+            'given_by'  =>  $user
         );
         $this->db->insert('feedbacks', $item);
 

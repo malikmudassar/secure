@@ -82,11 +82,19 @@ class Selfcare extends CI_Controller {
     public function submit_feedback()
     {
         // echo '<pre>';print_r($_POST);exit;
-        $p=$this->uri->segment(3);
-        $step=$this->uri->segment(4);
-        $this->admin_model->submitFeedback($_POST, $step, $p);
-        $this->session->set_flashdata('success', 'Feedback submitted');
-        redirect(base_url().'selfcare/p_view/'.$p);
+        if($this->session->userdata['id'])
+        {
+            $p=$this->uri->segment(3);
+            $step=$this->uri->segment(4);
+            $user=$this->session->userdata['id'];
+            $this->admin_model->submitFeedback($_POST, $step, $p, $user);
+            $this->session->set_flashdata('success', 'Feedback submitted');
+            redirect(base_url().'selfcare/p_view/'.$p);
+        }
+        else
+        {
+            return false;
+        }        
     }
 
     public function online()
