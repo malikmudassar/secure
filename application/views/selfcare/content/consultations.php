@@ -14,7 +14,7 @@
     <div class="row col-lg-12">
        
          <div class="col-lg-12">
-          <h1 class="pageHeading">Life Styles</h1> </div>
+          <h1 class="pageHeading">Online Consultation</h1> </div>
    
     	<div class="col-lg-4">
     		<div class="pathWay">
