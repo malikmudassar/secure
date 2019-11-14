@@ -11,6 +11,10 @@ class Selfcare extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('admin_model');
+        if(!$this->session->userdata['id'])
+        {
+            redirect(base_url().'login');
+        }
     }
 
     public function index()
