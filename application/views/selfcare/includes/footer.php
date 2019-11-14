@@ -37,5 +37,9 @@ $(document).ready(function(){
             $('#kg').hide();
             $('#stone').show();
       });
+
+      $('#btn-feedback').click(function(){
+            $('#feedback').submit();
+      });
 });
 </script>
