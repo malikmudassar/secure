@@ -17,7 +17,9 @@
         <?php if($question['type']=='alert'){?>            
             <div style="width:100%; height:100px; padding-top:30px; padding-left:30px; font-size:16pt; background:red">
                 <h4 class="quesPath" style="color:white"><?php echo $question['statement']?></h4>
-               
+                <div class="form-group">
+                    <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i>Edit Question</a> 
+                </div>
             </div>
         <?php } else {?>
             <h4 class="quesPath"><?php echo $question['statement']?></h4>
