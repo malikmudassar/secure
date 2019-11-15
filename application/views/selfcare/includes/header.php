@@ -45,6 +45,9 @@
               </span>
             </a>
             <div class="dropdown-menu profile-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="<?php echo base_url().'activity'?>">
+            <img src="<?php echo ASSET_URL?>assets/img/dashboard/user.svg" class="nav-profile-img" alt="image" class="img-fluid">
+            Activity</a>
             <a class="dropdown-item" href="<?php echo base_url().'selfcare/profile'?>">
             <img src="<?php echo ASSET_URL?>assets/img/dashboard/user.svg" class="nav-profile-img" alt="image" class="img-fluid">
             Profile</a>

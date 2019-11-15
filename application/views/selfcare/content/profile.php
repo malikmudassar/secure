@@ -40,6 +40,7 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-blue"> Update </button>
+                    <a href="<?php echo base_url().'selfcare/password'?>" class="btn btn-link">Change Password</a>
                 </div>
             </form>
             <div class="clearfix"></div>

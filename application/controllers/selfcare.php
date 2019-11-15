@@ -47,11 +47,12 @@ class Selfcare extends CI_Controller {
     {
         $q=$this->uri->segment(4);
         $p=$this->uri->segment(3);
+        $user=$this->session->userdata['id'];
         $data['title']='Edit Question';
         $data['question']=$this->admin_model->getAllById('questions', $q);
         if($_POST)
         {
-            $this->admin_model->updateQuestion($_POST, $q);
+            $this->admin_model->updateQuestion($_POST, $q, $user);
             redirect(base_url().'selfcare/p_view/'.$p);
         }
         else
@@ -279,11 +280,6 @@ class Selfcare extends CI_Controller {
             {
                 $data['answer'][0]=array();
             }
-            // if(count($data['answer'][0][0]>0))
-            // {
-            //     $data['answer']=$data['answer'][0];
-            // }
-            
         }
          
         
@@ -425,7 +421,55 @@ class Selfcare extends CI_Controller {
         
     }
 
-
+    public function password()
+    {
+        $id=$this->session->userdata['id'];
+        $data['user']=$this->admin_model->getAllById('users', $id);
+        $data['title']='EZ Triage';
+        if($_POST)
+        {
+            
+            $config=array(
+                array(
+                    'field' =>  'password',
+                    'label' =>  'Password',
+                    'rules' =>  'trim|required'
+                ),
+                array(
+                    'field' =>  'conf_password',
+                    'label' =>  'Confirm Password',
+                    'rules' =>  'trim|required|matches[password]'
+                )
+            );
+            $this->form_validation->set_rules($config);
+            if($this->form_validation->run()==false)
+            {
+                $data['errors']=validation_errors();
+                $data['user']=$this->admin_model->getAllById('users', $id);
+                $this->load->view('selfcare/includes/header',$data);
+                $this->load->view('selfcare/content/password');
+                $this->load->view('selfcare/includes/footer');
+            }
+            else
+            {
+                $this->admin_model->updatePassword($_POST, $id);
+                $data['success']='Password Updated Successfully';
+                $data['user']=$this->admin_model->getAllById('users', $id);
+                $this->load->view('selfcare/includes/header',$data);
+                $this->load->view('selfcare/content/password');
+                $this->load->view('selfcare/includes/footer');
+            }
+           
+            
+        }
+        else
+        {
+            $this->load->view('selfcare/includes/header',$data);
+            $this->load->view('selfcare/content/password');
+            $this->load->view('selfcare/includes/footer');
+        }
+            
+    }
     
     
 

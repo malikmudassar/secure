@@ -6760,12 +6760,30 @@ class Admin_model extends CI_Model {
         }
     }
 
-    public function updateQuestion($data, $q)
+    public function updateQuestion($data, $q, $user)
     {
+        $q=$this->getAllById('questions', $q);
+        $user=$this->getAllById('users', $user);
         $item=array(
             'statement' => $data['statement']
         );
-        $this->db->where('id', $q)->update('questions', $item);
+        $this->db->where('id', $q['id'])->update('questions', $item);
+        $feedback=$user['name']." has updated the statement from <b>'".$q['statement']."'</b> to <i>'".$data['statement']."'</i>";
+        $item=array(
+            'feedback'  => $feedback,
+            'pathway'   => $q['pathway'],
+            'given_by'  =>  $user['id']
+        );
+        $this->db->insert('feedbacks', $item);
+    }
+
+    public function updatePassword($data, $id)
+    {
+        $item=array(
+            'password'  => md5(sha1($data['password']))
+        );
+        $this->db->where('id', $id)->update('users', $item);
+        return true;
     }
 
     public function submitFeedback($data, $step, $p, $user)
@@ -7980,6 +7998,14 @@ class Admin_model extends CI_Model {
     {
         $this->db->where('id', $id)->update('users', $data);
         return true;
+    }
+
+    public function getFeedbacksById($id)
+    {
+        return $this->db->query('select feedbacks.*, pathways.name as pathway, users.name as user from feedbacks
+        inner join pathways on pathways.id=feedbacks.pathway
+        inner join users on users.id=feedbacks.given_by
+        where feedbacks.pathway='.$id)->result_array();
     }
 
 }
