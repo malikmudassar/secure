@@ -8008,4 +8008,12 @@ class Admin_model extends CI_Model {
         where feedbacks.pathway='.$id)->result_array();
     }
 
+    public function getFeedbackByStep($step, $pw)
+    {
+        return $this->db->select('*')->from('feedbacks')
+        ->where('pathway', $pw)
+        ->where('step', $step)
+        ->get()->result_array();
+    }
+
 }

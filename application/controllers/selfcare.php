@@ -167,6 +167,7 @@ class Selfcare extends CI_Controller {
         
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
+        $data['feedback']=$this->admin_model->getFeedbackByStep($data['step'], $data['pathway']);
         // echo '<pre>';print_r($data);exit;
         if(!$data['question'])
         {
@@ -236,6 +237,7 @@ class Selfcare extends CI_Controller {
             $data['p_name']=$pw['name'];
             $data['user_id']=$params['user_id'];
             $data['title']='EZ Triage';
+            $data['feedback']=$this->admin_model->getFeedbackByStep($data['step'], $data['pathway']);
             $this->load->view('selfcare/includes/header',$data);
             $this->load->view('selfcare/content/pathflow');
             $this->load->view('selfcare/includes/footer');
@@ -308,6 +310,7 @@ class Selfcare extends CI_Controller {
         $data['user_id']=$params['user_id'];
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
+        $data['feedback']=$this->admin_model->getFeedbackByStep($data['step'], $data['pathway']);
         // echo '<pre>';print_r($data);exit;
         $data['title']='EZ Triage';
         $this->load->view('selfcare/includes/header',$data);

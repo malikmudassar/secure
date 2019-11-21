@@ -129,6 +129,23 @@
             </pre>
         </form>
         <div class="clearfix"></div>
+        <div class="col-md-12">
+            <table class="table">
+            
+            <?php 
+                if($feedback){
+                    for($i=0;$i<count($feedback);$i++){
+                    ?>
+                    <tr>
+                        <td>
+                            <?php echo $feedback[$i]['feedback']?>
+                        </td>
+                    </tr>
+                    <?php
+                }}
+            ?>
+            </table>
+        </div>
         <div class="col-md-12" style="padding-left: 0px;">
                 <div class="col-md-6 col-sm-12">
                         <?php if($this->session->flashdata('success')){?>
@@ -146,34 +163,6 @@
                 </div>
             
         </div>
-<!--           
-          <div class="inputGroup">
-            <input id="option1" name="options[]" type="checkbox"/>
-            <label for="option1">Option One</label>
-          </div>
-          
-          <div class="inputGroup">
-            <input id="option2" name="options[]" type="checkbox"/>
-            <label for="option2">Option Two</label>
-          </div> -->
-                
-  
-        <!-- <div class="col-lg-12"></div>
-            <div class="col-lg-5">
-                    <form class="form-group">
-                        <input type="text" class="form-control imgDate mb-2" name="" placeholder="First date of sickness">
-                    <input type="text" class="form-control mb-2" name="" placeholder="Number of sick days required for">
-                    <input type="text" class="form-control mb-2" name="" placeholder="What is the reason you can not work?">
-                    </form>
-            
-            </div>
 
-            <div class="col-lg-12">
-                <button type="button" class="btn btn-blue">Previous</button>
-                <button type="button" class="btn btn-grey">Next</button>
-            </div>
-
-            
-        </div> col 12 -->
     </div> <!-- row -->
   </div>  
