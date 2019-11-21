@@ -11,6 +11,7 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <th>Sr#</th>
+                        <th>Step</th>
                         <th>Pathway</th>
                         <th>Feedback</th>
                         <th>By</th>
@@ -20,6 +21,7 @@
                     <?php for($i=0;$i<count($feedbacks);$i++){?>
                     <tr>
                         <td><?php echo $i+1;?></td>
+                        <td><?php echo $feedbacks[$i]['step'];?></td>
                         <td><?php echo $feedbacks[$i]['pathway'];?></td>
                         <td><?php echo $feedbacks[$i]['feedback'];?></td>
                         <td><?php echo $feedbacks[$i]['user'];?></td>
