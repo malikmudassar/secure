@@ -6947,6 +6947,7 @@ class Admin_model extends CI_Model {
     {
         $item=array(
             'statement' =>  $data['statement'],
+            'tooltip' =>  $data['tooltip'],
             'pathway'   =>  $data['pathway'],
             'type'      =>  $data['type']
         );
@@ -6980,12 +6981,12 @@ class Admin_model extends CI_Model {
     public function addAnsModel($data)
     {
         $item=array(
-            'label' =>  $data['label'],
-            'text' =>  $data['textboxes'],
-            'radio' =>  $data['radioboxes'],
-            'checkbox' =>  $data['checkboxes'],
-            'textarea' =>  $data['textarea'],
-            'selectbox'    => $data['dropdown']
+            'label'         =>  $data['label'],
+            'text'          =>  $data['textboxes'],
+            'radio'         =>  $data['radioboxes'],
+            'checkbox'      =>  $data['checkboxes'],
+            'textarea'      =>  $data['textarea'],
+            'selectbox'     =>  $data['dropdown']
         );
 
         $this->db->insert('answer_models',$item);
@@ -7011,10 +7012,6 @@ class Admin_model extends CI_Model {
                         {
                             unset($data[0][$i]);
                         }
-                        // else
-                        // {
-                        //     $d['form'][$i]=$data[0][$i];                            
-                        // }
                     }
                     // $data[0]=$d['form'];
                     return array_values($data[0]); 
@@ -7023,11 +7020,6 @@ class Admin_model extends CI_Model {
                 {
                     return $data[0];
                 }
-                // 
-                
-
-                //$key = array_search('green', $array);
-                //\unset($array[1]);
             }
             else
             {
@@ -8005,7 +7997,8 @@ class Admin_model extends CI_Model {
         return $this->db->query('select feedbacks.*, pathways.name as pathway, users.name as user from feedbacks
         inner join pathways on pathways.id=feedbacks.pathway
         inner join users on users.id=feedbacks.given_by
-        where feedbacks.pathway='.$id)->result_array();
+        where feedbacks.pathway='.$id.'
+        order by feedbacks.id desc')->result_array();
     }
 
     public function getFeedbackByStep($step, $pw)
