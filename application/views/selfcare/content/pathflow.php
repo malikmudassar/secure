@@ -16,13 +16,20 @@
 
         <?php if($question['type']=='alert'){?>            
             <div style="width:100%; padding-top:30px; padding-left:30px; font-size:16pt; background:red">
-                <h4 class="quesPath" style="color:white"><?php echo $question['statement']?></h4>
+                <h4 class="quesPath" style="color:white">
+                    <?php echo $question['statement']?>
+                    
+                </h4>
                 <div class="form-group">
                     <a id="lnk_eq" style="color:white" href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i> Edit statement</a> 
                 </div>
             </div>
         <?php } else {?>
-            <h4 class="quesPath"><?php echo $question['statement']?></h4>
+            <h4 class="quesPath"><?php echo $question['statement']?>
+                    <?php if($question['tooltip']){?>
+                        <i style="color:blue; cursor:pointer" data="<?php echo $question['tooltip']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $question['tooltip']?>')"></i>
+                    <?php }?>
+            </h4>
             <div class="form-group">
                 <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i>Edit Question</a> 
             </div>
@@ -166,3 +173,11 @@
 
     </div> <!-- row -->
   </div>  
+<script>
+    function callAlert(d)
+    {
+        alert(d);
+    }
+        
+    
+</script>
