@@ -6,7 +6,7 @@
         <th>Type</th>
         <th>Pathway</th>
         <th>Feedback</th>
-        <th>By</th>
+        <th style="width:150px;">By</th>
         <th>On </th>
     </thead>
 
