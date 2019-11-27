@@ -53,6 +53,15 @@ class Activity extends CI_Controller {
         $this->load->view('selfcare/includes/footer');
     }
 
+    public function getFeedbacksByType()
+    {
+        $id=$this->uri->segment(3);
+        $pw=$this->uri->segment(4);
+        $data['feedbacks']=$this->admin_model->getFeedbackByType($id, $pw);
+        // print_r($data);
+        return $this->load->view('selfcare/content/type_feedback', $data);
+    }
+
     
 }
 ?>

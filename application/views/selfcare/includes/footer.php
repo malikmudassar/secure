@@ -15,7 +15,7 @@
 
   <script src="<?php echo ASSET_URL?>assets/jquery/jquery.min.js"></script>
   <script src="<?php echo ASSET_URL?>assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+  <script src="<?php echo ASSET_URL?>assets/js/sweetalert.min.js"></script>  
 </body>
 
 </html>
@@ -49,6 +49,17 @@ $(document).ready(function(){
 
       $('#btn-feedback').click(function(){
             $('#feedback').submit();
+      });
+      $('#type').on('change',function(){
+            var type=$('#type').val();
+            var pw=<?php echo $this->uri->segment(3);?>;
+            Url="<?php echo base_url().'activity/getFeedbacksByType/'?>"+type+'/'+pw;
+            $.ajax({url: Url,success: function(result)
+                        {
+                              $("#type_content").html(result);
+                        }
+                  }
+            );
       });
 });
 </script>
