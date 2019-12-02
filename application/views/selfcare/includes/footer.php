@@ -52,7 +52,7 @@ $(document).ready(function(){
       });
       $('#type').on('change',function(){
             var type=$('#type').val();
-            var pw=<?php echo $this->uri->segment(3);?>;
+            var pw=<?php echo ($this->uri->segment(3))?$this->uri->segment(3):0;?>;
             Url="<?php echo base_url().'activity/getFeedbacksByType/'?>"+type+'/'+pw;
             $.ajax({url: Url,success: function(result)
                         {

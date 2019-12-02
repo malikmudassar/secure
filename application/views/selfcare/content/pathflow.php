@@ -113,7 +113,7 @@
                     <div style="margin-bottom:0px; padding-top:50px;">
                         <div class="col-md-6" style="padding-left: 0px;">
                             <?php if($back!=0){?>
-                                <a href="<?php echo base_url().'selfcare/pb_view/'.$question['pathway'].'/'.$back.'/'.$step?>" class="btn btn-blue" >Previous</a>
+                                <a href="<?php echo base_url().'selfcare/pb1_view/'.$question['pathway'].'/'.$back.'/'.$step?>" class="btn btn-blue" >Previous</a>
                             <?php }?>
                        
                             <?php if($next!=0){?>
@@ -137,6 +137,7 @@
         </form>
         <div class="clearfix"></div>
         <div class="col-md-12">
+            <h4>Previous feedbacks</h4>
             <table class="table">
             
             <?php 

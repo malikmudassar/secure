@@ -7416,6 +7416,15 @@ class Admin_model extends CI_Model {
                     }
                 } 
             }
+            else
+            {
+                $item=array(
+                    'pathway'   => $data['pathway'],
+                    'step'      => $data['step'],
+                    'user_id'   => $data['user_id']
+                );
+                $this->db->insert('step_answers',$item);
+            }
             $d=count($this->db->select('*')->from('steps')->where('pathway',$data['pathway'])
                         ->get()->result_array());
             $percent=round(($data['step']/$d)*100);
@@ -8035,6 +8044,15 @@ class Admin_model extends CI_Model {
             where feedbacks.pathway='.$pw.' and feedbacks.step IS NOT NULL
             order by feedbacks.id desc')->result_array();
         }
+    }
+
+    public function getBackStepByStepAns($step, $pathway, $user_id)
+    {
+        $st=$this->db->query('select DISTINCT(step) from step_answers where user_id='.$user_id
+        .' and pathway='.$pathway.' order by step desc')->result_array();
+        // echo $this->db->last_query();exit;
+        $step=$this->getStepByNumber($st[0]['step'],$pathway);
+        return $step;
     }
 
 }

@@ -270,6 +270,78 @@ class Selfcare extends CI_Controller {
             $params['next']=$path['next'];
             
         }
+        echo '<pre>';print_r($params);exit;
+        $data=$this->admin_model->getBackPathwayQuestion($params);
+        if($params['pathway']==3)
+        {
+            $data['answer']=$this->admin_model->getStepAnswer($params);
+        }
+        else
+        {
+            $data['answer'][0]=$this->admin_model->getStepAnswer($params);
+            if(!$data['answer'][0])
+            {
+                $data['answer'][0]=array();
+            }
+        }
+         
+        
+        $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
+
+        if(!empty($data['form']))
+        {
+            $data['step_type']=$data['form'][0]['type'];
+            if($params['pathway']==3)
+            {
+                for($i=0;$i<count($data['form']);$i++)
+                {
+                    $data['form'][$i]['type']='decimal';
+                }
+            } 
+        }
+        else
+        {
+            $data['step_type']='info';
+            $data['form']=array();
+        }
+        if($data['back']==0)
+        {
+            $data['percent']=0;
+        }
+        $data['user_id']=$params['user_id'];
+        $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
+        $data['p_name']=$pw['name'];
+        $data['feedback']=$this->admin_model->getFeedbackByStep($data['step'], $data['pathway']);
+        // echo '<pre>';print_r($data);exit;
+        $data['title']='EZ Triage';
+        $this->load->view('selfcare/includes/header',$data);
+        $this->load->view('selfcare/content/pathflow');
+        $this->load->view('selfcare/includes/footer');
+    }
+    public function pb1_view()
+    {
+        $params['pathway']=$this->uri->segment(3);
+        $params['step']=$this->uri->segment(4);
+        $params['next']=$this->uri->segment(5);
+        $params['user_id']=$this->session->userdata['id'];
+        // echo '<pre>';print_r($params);exit;
+        $step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
+        //$step=$this->admin_model->getBackStepByStepAns($params['step'], $params['pathway'], $params['user_id']);
+        // echo '<pre>';print_r($step);exit;
+        if($step['type']!='question' && $step['type']!='info')
+        {
+            do {
+                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+                // print_r($path);exit;
+                $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
+                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+            }while($step['type']!='question');
+            
+            $params['step']=$path['step'];
+            $params['next']=$path['next'];
+            
+        }
+        // echo '<pre>';print_r($params);exit;
         $data=$this->admin_model->getBackPathwayQuestion($params);
         if($params['pathway']==3)
         {
