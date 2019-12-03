@@ -109,6 +109,9 @@
                 <input type="hidden" name="step" value="<?php echo $step?>">
                 <input type="hidden" name="back" value="<?php echo $back?>">
                 <input type="hidden" name="next" value="<?php echo $next?>">
+                <?php //echo '<br>step ='.$step.'<br>';?>
+                <?php //echo 'back ='.$back.'<br>';?>
+                <?php //echo 'next ='.$next.'<br>';?>
                 <div class="form-group" style="margin-bottom:10px;">
                     <div style="margin-bottom:0px; padding-top:50px;">
                         <div class="col-md-6" style="padding-left: 0px;">

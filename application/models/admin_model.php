@@ -6743,7 +6743,29 @@ class Admin_model extends CI_Model {
         $data['percent']=($params['step']/$steps)*100;
 
         return $data;
-    }    
+    }  
+    
+    public function getBackPathwayQuestion1($params)
+    {
+        $step=$this->getStepByNumber($params['step'], $params['pathway']);
+        // echo '<pre>';print_r($step);exit;
+        
+        $st=$this->db->select('*')->from('pathflow')
+                ->where('pathway',$params['pathway'])
+                ->where('step',$params['step'])
+                ->get()->result_array();
+        $this->db->query('delete from step_answers where pathway='.$params['pathway'].' and user_id='.$params['user_id'].' and step > '.$params['step']);
+        // echo $this->db->last_query();exit;
+        $data=$st[0];
+        $st=$this->db->query('select questions.* from questions inner join step_questions on step_questions.question=questions.id where step='.$step['id'])->result_array();
+        $data['question']=$st[0];
+        $steps=count($this->db->select('*')->from('steps')
+                    ->where('pathway',$params['pathway'])
+                    ->get()->result_array());
+        $data['percent']=($params['step']/$steps)*100;
+
+        return $data;
+    } 
     public function checkUser($data)
     {
         $st=$this->db->select('*')->from('users')
@@ -7488,6 +7510,14 @@ class Admin_model extends CI_Model {
                 }
             }
         }
+
+        $item=array(
+            'pathway'   =>  $data['pathway'],
+            'user_id'   =>  $data['user_id'],
+            'step'      =>  $data['step']
+        );
+
+        $this->db->insert('pathway_steps', $item);
         return true;
 
     }
@@ -8046,13 +8076,25 @@ class Admin_model extends CI_Model {
         }
     }
 
-    public function getBackStepByStepAns($step, $pathway, $user_id)
+    public function getBackStepByFlow($data)
     {
-        $st=$this->db->query('select DISTINCT(step) from step_answers where user_id='.$user_id
-        .' and pathway='.$pathway.' order by step desc')->result_array();
+        $st=$this->db->select('step')
+        ->from('pathway_steps')
+        ->where('pathway', $data['pathway'])
+        ->where('user_id',$data['user_id'])
+        ->order_by('step', 'desc')
+        ->get()
+        ->result_array();
         // echo $this->db->last_query();exit;
-        $step=$this->getStepByNumber($st[0]['step'],$pathway);
+        // echo '<pre>';print_r($st[0]['step']);exit;
+        $step=$this->getStepByNumber($st[0]['step'],$data['pathway']);
+        
         return $step;
+    }
+
+    public function removeFlowStep($step, $pathway, $user_id)
+    {
+        $this->db->query('delete from pathway_steps where step='.$step.' and pathway='.$pathway.' and user_id='.$user_id);
     }
 
 }

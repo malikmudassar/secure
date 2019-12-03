@@ -325,24 +325,32 @@ class Selfcare extends CI_Controller {
         $params['next']=$this->uri->segment(5);
         $params['user_id']=$this->session->userdata['id'];
         // echo '<pre>';print_r($params);exit;
-        $step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
-        //$step=$this->admin_model->getBackStepByStepAns($params['step'], $params['pathway'], $params['user_id']);
+        //$step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
+        $step=$this->admin_model->getBackStepByFlow($params);
         // echo '<pre>';print_r($step);exit;
-        if($step['type']!='question' && $step['type']!='info')
-        {
-            do {
-                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
-                // print_r($path);exit;
-                $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
-                $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
-            }while($step['type']!='question');
+        $this->admin_model->removeFlowStep($step['number'], $params['pathway'], $params['user_id']);
+        $params['step']=$step['number'];
+        // echo '<pre>';print_r($step);exit;
+        // if($step['type']!='question' && $step['type']!='info')
+        // {
+        //     do {
+        //         $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+        //         // print_r($path);exit;
+        //         $step=$this->admin_model->getStepByNumber($path['back'], $params['pathway']);
+        //         $path=$this->admin_model->getPathFlowByStep($step['number'], $params['pathway']);
+        //     }while($step['type']!='question');
             
-            $params['step']=$path['step'];
-            $params['next']=$path['next'];
+        //     $params['step']=$path['step'];
+        //     $params['next']=$path['next'];
             
-        }
+        // }
+        // else
+        // {
+        //     $param['step']=$stepNumber;
+        // }
         // echo '<pre>';print_r($params);exit;
-        $data=$this->admin_model->getBackPathwayQuestion($params);
+        $data=$this->admin_model->getBackPathwayQuestion1($params);
+        // echo '<pre>';print_r($data);exit;
         if($params['pathway']==3)
         {
             $data['answer']=$this->admin_model->getStepAnswer($params);
