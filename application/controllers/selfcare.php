@@ -554,6 +554,14 @@ class Selfcare extends CI_Controller {
             
     }
 
+    public function finish_pw()
+    {
+        $pw=$this->uri->segment(3);
+        $user_id=$this->uri->segment(4);
+        $this->admin_model->finish_pw($pw, $user_id);
+        redirect(base_url().'selfcare/category');
+    }
+
     
     
     

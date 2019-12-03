@@ -128,7 +128,7 @@
                                 <?php }?>
                             </button>
                             <?php }else{?>
-                                <a href="<?php echo base_url().'selfcare/category'?>" class="btn btn-default "> Finish </a>
+                                <a href="<?php echo base_url().'selfcare/finish_pw/'.$question['pathway'].'/'.$this->session->userdata['id']?>" class="btn btn-default "> Finish </a>
                             <?php }?>
                         </div>
                     </div>
