@@ -8099,9 +8099,7 @@ class Admin_model extends CI_Model {
 
     public function finish_pw($pw, $user_id)
     {
-        $this->db->delete()->from('pathway_steps')
-        ->where('pathway', $pw)
-        ->where('user_id', $user_id);
+        $this->db->query('delete from pathway_steps where pathway='.$pathway.' and user_id='.$user_id);
     }
 
 }
