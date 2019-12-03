@@ -8100,6 +8100,7 @@ class Admin_model extends CI_Model {
     public function finish_pw($pw, $user_id)
     {
         $this->db->query('delete from pathway_steps where pathway='.$pw.' and user_id='.$user_id);
+        $this->db->query('delete from user_pathway_status where pathway='.$pw.' and user_id='.$user_id);
     }
 
 }
