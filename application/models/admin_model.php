@@ -1463,7 +1463,7 @@ class Admin_model extends CI_Model {
                     } 
                 break;
                 case '==':
-                // echo '<pre>result '.$result['value'].' ';echo ($condition['value']);exit;
+                // echo '<pre>result '.$result['value'].' ';print_r ($condition);exit;
                     if(isset($result[0]))
                     {
                         if($result[0]['value'] == $condition['value'])
@@ -1559,13 +1559,13 @@ class Admin_model extends CI_Model {
                 break;
             }
                 
-            
-            $step=$this->getStepByNumber($data['step'], $params['pathway']);
             // echo '<pre>';print_r($step);print_r($data);exit;
+            $step=$this->getStepByNumber($data['step'], $params['pathway']);
+            
 
             if($step['type']=='question' || $step['type']=='info')
             {
-                // echo "<script>console.log('1516. Next Step '".$step['id']." is ".$step['type'].")</script>";
+                // echo "<script>console.log('1516. Next Step ".$step['id']." is ".$step['type'].")</script>";
                 // echo 'next step q';exit;
                 $st=$this->db->query('select questions.* from questions inner join step_questions on step_questions.question=questions.id where step='.$step['id'])->result_array();
                 $data['question']=$st[0];
@@ -8094,7 +8094,10 @@ class Admin_model extends CI_Model {
 
     public function removeFlowStep($step, $pathway, $user_id)
     {
-        $this->db->query('delete from pathway_steps where step='.$step.' and pathway='.$pathway.' and user_id='.$user_id);
+        if($step)
+        {
+            $this->db->query('delete from pathway_steps where step='.$step.' and pathway='.$pathway.' and user_id='.$user_id);
+        }
     }
 
     public function finish_pw($pw, $user_id)
