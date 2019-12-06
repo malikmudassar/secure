@@ -78,6 +78,17 @@
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
 			</div>
+			<div class="col-lg-4">
+				<div class="pathWay">
+					<div class="icon-path">
+						<img src="<?php echo ASSET_URL?>assets/img/pathways/ordermedication.svg" alt="icon" class="img-fluid">
+					</div>
+					<div style="display: inline-block;">
+					<a href="<?php echo base_url().'selfcare/p_view/24'?>"><h3>STI</h3></a>
+					</div>
+				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
+				</div>
+			</div>
     	</div> <!-- col 12 -->
     </div> <!-- row -->
   </div>  <!-- container -->
