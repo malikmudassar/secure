@@ -89,7 +89,7 @@
             <?php }?> 
             <?php for($i=0;$i<count($form);$i++){?>
                     <div class="form-group">
-                        <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file'){?>
+                        <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file' || $form[$i]['type']=='number' || $form[$i]['type']=='date'){?>
                             <label><?php echo $form[$i]['caption'];?></label>
                             <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
                             value="<?php echo $answer[0][0]['value']?$answer[0][$i]['value']:$answer[$i]['value'];?>">
