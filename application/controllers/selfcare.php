@@ -333,20 +333,11 @@ class Selfcare extends CI_Controller {
         
         $data=$this->admin_model->getBackPathwayQuestion1($params);
         // echo '<pre>';print_r($data);exit;
-        if($params['pathway']==3)
+        $data['answer']=$this->admin_model->getStepAnswer($params);         
+        if($params['pathway']==21 && $step['number']==11)
         {
-            $data['answer']=$this->admin_model->getStepAnswer($params);
+            $data['answer']=array_reverse($data['answer']);
         }
-        else
-        {
-            $data['answer'][0]=$this->admin_model->getStepAnswer($params);
-            if(!$data['answer'][0])
-            {
-                $data['answer'][0]=array();
-            }
-        }
-         
-        
         $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
 
         if(!empty($data['form']))
@@ -369,6 +360,7 @@ class Selfcare extends CI_Controller {
         {
             $data['percent']=0;
         }
+        // echo '<pre>';print_r($data);exit;
         $data['user_id']=$params['user_id'];
         $pw=$this->admin_model->getAllById('pathways', $data['pathway']);
         $data['p_name']=$pw['name'];
