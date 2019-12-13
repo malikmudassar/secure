@@ -60,7 +60,7 @@
                                 }
                             }
                             ?>
-                        required> 
+                        > 
                         <label for="option_<?php echo $i+1;?>">
                             <?php if($question['id']>=421 && $question['id']<=424){?>
                                 <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.svg'?>" style="height:65px; width:65px;">
@@ -165,7 +165,7 @@
                     <form id="feedback" method="post" type="" action="<?php echo base_url().'selfcare/submit_feedback/'.$question['pathway'].'/'.$step?>">
                         <div class="form-group" style="margin-top:50px">
                             <label>Feedback</label>
-                            <textarea class="form-control" name="feedback" required></textarea>
+                            <textarea class="form-control" name="feedback" ></textarea>
                         </div>
                         <div class="form-group">
                             <button type="button" id="btn-feedback" class="btn btn-blue">Submit</button>
