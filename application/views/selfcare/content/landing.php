@@ -17,7 +17,7 @@
             <!-- col 12 -->
             <div class="row">
                 <div class="col-md-12">
-                    <form action="<?php echo base_url().'selfcare/category'?>" method="post">
+                    <form action="<?php echo base_url().'selfcare/consultations/'?>" method="post">
                         
                             <div class="form-group" style='margin-bottom:0px !important'>
                                 <label>Please select the application</div>
