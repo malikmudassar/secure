@@ -86,7 +86,7 @@
                         <label for="option<?php echo $i+1?>"><?php echo $form[$i]['caption']?></label>
                     </div>
                 <?php }?>
-            <?php }?> 
+            <?php } echo '<pre>';print_r($answer);?> 
             <?php for($i=0;$i<count($form);$i++){?>
                     <div class="form-group">
                         <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file' || $form[$i]['type']=='number' || $form[$i]['type']=='date'){?>
