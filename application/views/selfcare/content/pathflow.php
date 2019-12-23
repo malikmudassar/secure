@@ -61,6 +61,9 @@
                             }
                             ?>
                         > 
+                        <?php if($answer[0][0]['value']){?>
+                            <i style="color:blue; cursor:pointer" data="<?php echo $answer[0][0]['value']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $answer[0][0]['value']?>')"></i>
+                        <?php }?>
                         <label for="option_<?php echo $i+1;?>">
                             <?php if($question['id']>=421 && $question['id']<=424){?>
                                 <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.svg'?>" style="height:65px; width:65px;">
@@ -86,16 +89,14 @@
                         <label for="option<?php echo $i+1?>"><?php echo $form[$i]['caption']?></label>
                     </div>
                 <?php }?>
-            <?php } echo '<pre>';print_r($answer);?> 
+            <?php }?> 
             <?php for($i=0;$i<count($form);$i++){?>
                     <div class="form-group">
                         <?php if($form[$i]['type']=='text' || $form[$i]['type']=='decimal' || $form[$i]['type']=='file' || $form[$i]['type']=='number' || $form[$i]['type']=='date'){?>
                             <label><?php echo $form[$i]['caption'];?></label>
                             <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
                             value="<?php echo $answer[0][0]['value']?$answer[0][$i]['value']:$answer[$i]['value'];?>">
-                            <?php if($answer[0][0]['value']){?>
-                                <i style="color:blue; cursor:pointer" data="<?php echo $answer[0][0]['value']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $answer[0][0]['value']?>')"></i>
-                            <?php }?>
+                            
                         <?php }?>
                         
                     </div>
