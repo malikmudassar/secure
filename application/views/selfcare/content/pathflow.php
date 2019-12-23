@@ -61,14 +61,15 @@
                             }
                             ?>
                         > 
-                        <?php if($answer[0][0]['value']){?>
-                            <i style="color:blue; cursor:pointer" data="<?php echo $answer[0][0]['value']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $answer[0][0]['value']?>')"></i>
-                        <?php }?>
+                        
                         <label for="option_<?php echo $i+1;?>">
                             <?php if($question['id']>=421 && $question['id']<=424){?>
                                 <img src="<?php echo ASSET_URL.'assets/img/'.$form[$i]['value'].'.svg'?>" style="height:65px; width:65px;">
                             <?php }else{?>
-                                <?php echo $form[$i]['caption']?> </input>
+                                <?php echo $form[$i]['caption']?> 
+                                <?php if($answer[0][0]['value']){?>
+                                    <i style="color:blue; cursor:pointer" data="<?php echo $answer[0][0]['value']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $answer[0][0]['value']?>')"></i>
+                                <?php }?>
                             <?php }
                             // echo '$value :'.$value;exit;
                             ?>
