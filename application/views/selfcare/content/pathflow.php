@@ -34,7 +34,6 @@
                 <a id="lnk_eq" href="<?php echo base_url().'selfcare/edit_question/'.$question['pathway'].'/'.$question['id']?>"><i class="fa fa-pencil"></i>Edit Question</a> 
             </div>
         <?php }?>
-        <?php echo '<pre>';print_r($answer);echo '</pre>'; ?>
         <form data-toggle="validator" action="<?php echo base_url().'selfcare/pq_view'?>" method="post">    
             <?php for($i=0;$i<count($form);$i++){?>
                 <div class="inputGroup" style="width:50%">
