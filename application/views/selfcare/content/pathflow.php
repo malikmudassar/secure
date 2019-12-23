@@ -93,7 +93,9 @@
                             <label><?php echo $form[$i]['caption'];?></label>
                             <input type="<?php echo $form[$i]['type']?>" name="<?php echo $form[$i]['name']?>" class="form-control" placeholder="<?php echo $form[$i]['placeholder']?>" 
                             value="<?php echo $answer[0][0]['value']?$answer[0][$i]['value']:$answer[$i]['value'];?>">
-                                
+                            <?php if($answer[0][0]['value']){?>
+                                <i style="color:blue; cursor:pointer" data="<?php echo $answer[0][0]['value']?>" class="fa fa-info-circle" onclick="callAlert('<?php echo $answer[0][0]['value']?>')"></i>
+                            <?php }?>
                         <?php }?>
                         
                     </div>
