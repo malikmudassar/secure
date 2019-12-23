@@ -3,7 +3,6 @@
     <div class="row" style="background-color:#e9ecef; margin-bottom:10px;">
             <ul class="breadcrumb">
                 <li> <a href="<?php echo base_url().'selfcare'?>">Home</a></li>
-                <li style="padding-left:10px"> <a href="<?php echo base_url().'selfcare/category'?>">Categories</a></li>
                 <li style="padding-left:10px"> <?php echo $p_name;?> </li>
             </ul>
     </div>
