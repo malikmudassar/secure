@@ -328,7 +328,7 @@ class Selfcare extends CI_Controller {
         //$step=$this->admin_model->getStepByNumber($params['step'], $params['pathway']);
         $step=$this->admin_model->getBackStepByFlow($params);
         // echo '<pre>';print_r($step);exit;
-        $this->admin_model->removeFlowStep($step['number'], $params['pathway'], $params['user_id']);
+        
         $params['step']=$step['number'];
         
         $data=$this->admin_model->getBackPathwayQuestion1($params);
@@ -338,8 +338,9 @@ class Selfcare extends CI_Controller {
         {
             $data['answer']=array_reverse($data['answer']);
         }
+        
         $data['form']=$this->admin_model->getAnsForm($data['question']['id'], $params);
-
+        // echo '<pre>';print_r($data);exit;
         if(!empty($data['form']))
         {
             $data['step_type']=$data['form'][0]['type'];
@@ -367,6 +368,7 @@ class Selfcare extends CI_Controller {
         $data['feedback']=$this->admin_model->getFeedbackByStep($data['step'], $data['pathway']);
         // echo '<pre>';print_r($data);exit;
         $data['title']='EZ Triage';
+        $this->admin_model->removeFlowStep($step['number'], $params['pathway'], $params['user_id']);
         $this->load->view('selfcare/includes/header',$data);
         $this->load->view('selfcare/content/pathflow');
         $this->load->view('selfcare/includes/footer');
