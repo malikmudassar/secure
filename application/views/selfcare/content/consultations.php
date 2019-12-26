@@ -17,7 +17,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/activity.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;padding-top:7px">
-					<a href="<?php echo base_url().'activity/p_view/5'?>"><h3>Activity</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/5'?>"><h3>Activity</h3></a>
 					</div>
 					<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -28,7 +28,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/Alcohol.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;padding-top:7px">
-					<a href="<?php echo base_url().'activity/p_view/2'?>"><h3>Alcohol</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/2'?>"><h3>Alcohol</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -105,7 +105,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/Smoking.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;padding-top:7px">
-						<a href="<?php echo base_url().'activity/p_view/4'?>"><h3>Smoking</h3></a>
+						<a href="<?php echo base_url().'selfcare/p_view/4'?>"><h3>Smoking</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -138,7 +138,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/general.png" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;padding-top:7px">
-					<a href="<?php echo base_url().'activity/p_view/26'?>"><h3>Request General Advice</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/26'?>"><h3>Request General Advice</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -149,7 +149,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/indigestion.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;padding-top:7px">
-					<a href="<?php echo base_url().'activity/p_view/1'?>"><h3>Wellbeing</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/1'?>"><h3>Wellbeing</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
