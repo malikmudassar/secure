@@ -7,11 +7,8 @@
             </ul>
     </div>
     <div class="row">
-
     <!-- -->
- 
-
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="padding-bottom:em !important">
 
         <?php if($question['type']=='alert'){?>            
             <div style="width:100%; padding-top:30px; padding-left:30px; font-size:16pt; background:red">
@@ -114,9 +111,9 @@
                 <input type="hidden" name="step" value="<?php echo $step?>">
                 <input type="hidden" name="back" value="<?php echo $back?>">
                 <input type="hidden" name="next" value="<?php echo $next?>">
-                <?php //echo '<br>step ='.$step.'<br>';?>
-                <?php //echo 'back ='.$back.'<br>';?>
-                <?php //echo 'next ='.$next.'<br>';?>
+                <?php echo '<br>step ='.$step.'<br>';?>
+                <?php echo 'back ='.$back.'<br>';?>
+                <?php echo 'next ='.$next.'<br>';?>
                 <div class="form-group" style="margin-bottom:10px;">
                     <div style="margin-bottom:0px; padding-top:50px;">
                         <div class="col-md-6" style="padding-left: 0px;">
@@ -187,6 +184,4 @@
     {
         alert(d);
     }
-        
-    
 </script>
