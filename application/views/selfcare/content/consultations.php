@@ -50,7 +50,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/bloodtest.png" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;">
-					<a href="<?php echo base_url().'selfcare/p_view/25'?>"><h3>Blood Test</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/25'?>"><h3>Request a Blood Test</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -94,7 +94,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/RSN.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;">
-						<a href="<?php echo base_url().'selfcare/p_view/21'?>"><h3>Request sick note</h3></a>
+						<a href="<?php echo base_url().'selfcare/p_view/21'?>"><h3>Request a Sick Note</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
@@ -116,7 +116,7 @@
 						<img src="<?php echo ASSET_URL?>assets/img/pathways/sti.svg" alt="icon" class="img-fluid">
 					</div>
 					<div style="display: inline-block;">
-					<a href="<?php echo base_url().'selfcare/p_view/20'?>"><h3>STI</h3></a>
+					<a href="<?php echo base_url().'selfcare/p_view/20'?>"><h3>Request STI Testing</h3></a>
 					</div>
 				<img src="<?php echo ASSET_URL?>assets/img/pathways/arrowRight.svg" alt="" class="img-fluid arrowPath" style="float: right;">
 				</div>
