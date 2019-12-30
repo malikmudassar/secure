@@ -5,7 +5,7 @@
 <!--end navigation bar -->
 </div>
 <div class="container">
-    <div class="pathwaysContent maincontent-space" style="padding-top:25px;border:1px solid #ccc; background-color:#f0eded; margin-bottom:0px; padding-left:40px; padding-right:20px; margin-top:50px;">
+    <div class="pathwaysContent maincontent-space" style="padding-top:25px;border:1px solid #ccc; background-color:#f0eded; margin-bottom:0px; padding-left:40px; padding-right:20px; padding-bottom:em; margin-top:50px;">
         <div class="pathways" >
             
             <div class="login-form" >
