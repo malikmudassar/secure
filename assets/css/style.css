@@ -1583,6 +1583,9 @@ table.dataTable thead > tr > td.sorting {
 .tab-space {
     padding-top: 20px;
 }
+.pathwaysContent{
+    padding-bottom:5em !important;
+}
 /*.edit-profile h4 {
     color: #3c6cde;
     font-size: 15px;
