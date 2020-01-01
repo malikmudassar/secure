@@ -4952,7 +4952,7 @@ class Admin_model extends CI_Model {
                     $result=$this->getStepAnswer($d);
                     // echo '<pre>';print_r($condition);exit;
                     //print_r($step['id'].'-'.$params['pathway']); exit;
-                    // echo "<script>>console.log('1158 result is ".$result['value']."')</script>";
+                    echo "<script>>console.log('1158 result is ".$result['value']."')</script>";
                     switch($condition['operator'])
                     {
                         case '>':
@@ -5135,7 +5135,7 @@ class Admin_model extends CI_Model {
 
                     if($step['type']=='question' || $step['type']=='info')
                     {
-                        // echo "<script>>console.log('1340 step ".$step['id']." is question')</script>";
+                        echo "<script>>console.log('1340 step ".$step['id']." is question')</script>";
                         $st=$this->db->query('select questions.* from questions inner join step_questions on step_questions.question=questions.id where step='.$step['id'])->result_array();
                         $data['question']=$st[0];
                         return $data;
@@ -5186,7 +5186,7 @@ class Admin_model extends CI_Model {
                             
                             if($step['type']=='question' || $step['type']=='info')
                             {
-                                // echo "<script>>console.log('1391 next step is question')</script>";
+                                echo "<script>>console.log('1391 next step is question')</script>";
                                 $st=$this->db->query('select questions.* from questions inner join step_questions on step_questions.question=questions.id where step='.$step['id'])->result_array();
                                 $data['question']=$st[0];
                                 return $data;
@@ -5206,7 +5206,7 @@ class Admin_model extends CI_Model {
                                 $data['step']=$step['number'];
                                 $data['next']=$path['next'];
                                 // print_r($data);
-                                // echo "<script>>console.log('1411 Next Step ".$step['number']." is ".$step['type']." ')</script>";
+                                echo "<script>>console.log('1411 Next Step ".$step['number']." is ".$step['type']." ')</script>";
                                 // echo '<pre>';print_r($path);print_r($data);print_r($step);exit;
                                 if($step['type']=='question' || $step['type']=='info')
                                 {
@@ -5392,7 +5392,7 @@ class Admin_model extends CI_Model {
                             $result=$this->getStepAnswer($d);
                             // echo '<pre>';print_r($condition);exit;
                             //print_r($step['id'].'-'.$params['pathway']); exit;
-                            // echo "<script>>console.log('1936 result is ".$result['value']."')</script>";
+                            echo "<script>>console.log('1936 result is ".$result['value']."')</script>";
                             switch($condition['operator'])
                             {
                                 case '>':
@@ -5572,7 +5572,7 @@ class Admin_model extends CI_Model {
                             $step=$this->getStepByNumber($data['step'], $params['pathway']);
                             //$step=$this->getNextStep($step,$params);
                             //echo '<pre>';print_r($step);print_r($data);exit;
-                            // echo "<script>>console.log('2117 step ".$step['number']." is ".$step['type']."')</script>";
+                            echo "<script>>console.log('2117 step ".$step['number']." is ".$step['type']."')</script>";
                             if($step['type']=='question' || $step['type']=='info')
                             {
                                 
@@ -5592,7 +5592,7 @@ class Admin_model extends CI_Model {
                                 $result=$this->getStepAnswer($d);
                                 // echo '<pre>';print_r($result);exit;
                                 //print_r($step['id'].'-'.$params['pathway']); exit;
-                                // echo "<script>>console.log('2136 result is ".$result['value']."')</script>";
+                                echo "<script>>console.log('2136 result is ".$result['value']."')</script>";
                                 switch($condition['operator'])
                                 {
                                     case '>':
@@ -5772,7 +5772,7 @@ class Admin_model extends CI_Model {
                                 $step=$this->getStepByNumber($data['step'], $params['pathway']);
                                 //$step=$this->getNextStep($step,$params);
                                 //echo '<pre>';print_r($step);print_r($data);exit;
-                                // echo "<script>>console.log('2316 step ".$step['number']." is ".$step['type']."')</script>";
+                                echo "<script>>console.log('2316 step ".$step['number']." is ".$step['type']."')</script>";
                                 if($step['type']=='question' || $step['type']=='info')
                                 {
                                     
@@ -5792,7 +5792,7 @@ class Admin_model extends CI_Model {
                                     $result=$this->getStepAnswer($d);
                                     // echo '<pre>';print_r($condition);exit;
                                     //print_r($step['id'].'-'.$params['pathway']); exit;
-                                    // echo "<script>>console.log('2336 result is ".$result['value']."')</script>";
+                                    echo "<script>>console.log('2336 result is ".$result['value']."')</script>";
                                     switch($condition['operator'])
                                     {
                                         case '>':
@@ -5972,7 +5972,7 @@ class Admin_model extends CI_Model {
                                     $step=$this->getStepByNumber($data['step'], $params['pathway']);
                                     //$step=$this->getNextStep($step,$params);
                                     //echo '<pre>';print_r($step);print_r($data);exit;
-                                    // echo "<script>>console.log('2516 step ".$step['number']." is ".$step['type']."')</script>";
+                                    echo "<script>>console.log('2516 step ".$step['number']." is ".$step['type']."')</script>";
                                     if($step['type']=='question' || $step['type']=='info')
                                     {
                                         
@@ -5997,7 +5997,7 @@ class Admin_model extends CI_Model {
                     $result=$this->getStepAnswer($d);
                     // echo '<pre>';print_r($result);exit;
                     //print_r($step['id'].'-'.$params['pathway']); exit;
-                    // echo "<script>>console.log('2541 result is ".$result['value']."')</script>";
+                    echo "<script>>console.log('2541 result is ".$result['value']."')</script>";
                     switch($condition['operator'])
                     {
                         case '>':
@@ -6177,7 +6177,7 @@ class Admin_model extends CI_Model {
                     $step=$this->getStepByNumber($data['step'], $params['pathway']);
                     //$step=$this->getNextStep($step,$params);
                     //echo '<pre>';print_r($step);print_r($data);exit;
-                    // echo "<script>>console.log('2721 step ".$step['number']." is ".$step['type']."')</script>";
+                    echo "<script>>console.log('2721 step ".$step['number']." is ".$step['type']."')</script>";
                     if($step['type']=='question' || $step['type']=='info')
                     {
                         
@@ -6198,7 +6198,7 @@ class Admin_model extends CI_Model {
                         $result=$this->getStepAnswer($d);
                         // echo '<pre>';print_r($condition);exit;
                         //print_r($step['id'].'-'.$params['pathway']); exit;
-                        // echo "<script>>console.log('2741 result is ".$result['value']."')</script>";
+                        echo "<script>>console.log('2741 result is ".$result['value']."')</script>";
                         switch($condition['operator'])
                         {
                             case '>':
@@ -6399,7 +6399,7 @@ class Admin_model extends CI_Model {
                             $result=$this->getStepAnswer($d);
                             // echo '<pre>';print_r($condition);exit;
                             //print_r($step['id'].'-'.$params['pathway']); exit;
-                            // echo "<script>>console.log('2741 result is ".$result['value']."')</script>";
+                            echo "<script>>console.log('2741 result is ".$result['value']."')</script>";
                             switch($condition['operator'])
                             {
                                 case '>':
@@ -8224,6 +8224,14 @@ class Admin_model extends CI_Model {
     {
         $this->db->query('delete from pathway_steps where pathway='.$pw.' and user_id='.$user_id);
         $this->db->query('delete from user_pathway_status where pathway='.$pw.' and user_id='.$user_id);
+    }
+
+    public function addTest()
+    {
+        $item=array(
+            'hash'  => md5(sha1(strtotime(now())))
+        );
+        $this->db->insert('test', $item);
     }
 
 }
