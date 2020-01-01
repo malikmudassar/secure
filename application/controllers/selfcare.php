@@ -195,6 +195,7 @@ class Selfcare extends CI_Controller {
             $params=$_REQUEST;
         
             $params['user_id']=$this->session->userdata['id'];
+            $params['gender']=$this->session->userdata['gender'];
             if($params['step']==1)
             {
                 $this->admin_model->flush_pw_results($params['user_id'],$params['pathway']);
@@ -537,6 +538,8 @@ class Selfcare extends CI_Controller {
         $this->admin_model->finish_pw($pw, $user_id);
         redirect(base_url().'selfcare/category');
     }
+
+    
 
     
     
